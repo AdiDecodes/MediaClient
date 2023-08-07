@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'bb';
+	src: url('../Fonts/BarlowCondensed-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'br';
+	src: url('../Fonts/BarlowCondensed-Regular.ttf');
+}
+
+@mixin serviceHeading {
+	margin: 0 0 0.5rem 0;
+	font-weight: 600;
+	font-size: 2rem;
+	font-family: br;
+	color: black;
+}
+
+@mixin serviceDescription {
+	font-weight: 500;
+	font-size: 1.1rem;
+	font-family: 'Montserrat';
+	color: black;
+}
+
+.card {
+	background-color: aliceblue;
+	min-height: 30vh;
+	height: 65vh;
+	max-height: 100vh;
+	padding: 2rem;
+
+	.serviceContextWrapper {
+		display: flex;
+		flex-direction: column;
+		height: 50%;
+		margin: 0 0 0 1rem;
+
+		p:nth-child(1) {
+			@include serviceHeading();
+		}
+
+		p:nth-child(2) {
+			@include serviceDescription();
+		}
+
+		.contactBtn {
+			font-weight: 500;
+			font-family: 'Montserrat';
+			padding: 1rem;
+			background-color: rgb(255, 166, 0);
+			width: fit-content;
+			margin: 1.5rem 0 0 0;
+			border: 1px solid transparent;
+			transition: all 0.1s ease-in-out;
+
+			&:hover {
+				border: 1px solid rgb(0, 0, 0);
+				cursor: pointer;
+				background-color: transparent;
+				color: rgb(0, 0, 0);
+				transform: scale(1.03);
+			}
+		}
+	}
+
+	// &:nth-child(n + 2) {
+	// 	margin: 1rem;
+	// }
+
+	img {
+		height: 50%;
+		object-fit: contain;
+		aspect-ratio: 1;
+		width: 40%;
+		margin: 0 0 3rem 0;
+	}
+}
