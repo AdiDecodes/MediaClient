@@ -1,24 +1,49 @@
 import React, { useState } from 'react';
 import styles from './Styles/Header.module.scss';
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+	const navigate = useNavigate();
 	const [showSidebar, setSidebar] =
 		useState(false);
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.title}>
+			<div
+				className={styles.title}
+				onClick={() => {
+					navigate('/');
+				}}
+			>
 				FIRDAUS MEDIA
 			</div>
 			<div className={styles.menuWrapper}>
-				<a href='/hello'>Media</a>
-				<a href='/hello'>Services</a>
-				<a href='/hello'>Contact</a>
-				<a href='/hello'>Brands</a>
-				<a
-					href='/hello'
-					onClick={() => setSidebar(!showSidebar)}
+				<p
+					onClick={() => {
+						navigate('/');
+					}}
 				>
-					Become a partner
-				</a>
+					Media
+				</p>
+				<p
+					onClick={() => {
+						navigate('/');
+					}}
+				>
+					Services
+				</p>
+				<p
+					onClick={() => {
+						navigate('/contact');
+					}}
+				>
+					Contact
+				</p>
+				<p
+					onClick={() => {
+						navigate('/');
+					}}
+				>
+					Brands
+				</p>
 			</div>
 			<div
 				className={

@@ -21,7 +21,7 @@ const Carousel = () => {
 		dots: false,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 2,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,
@@ -47,7 +47,7 @@ const Carousel = () => {
 			id: 3,
 			title: 'Focused Instagram Marketing',
 			description: `We make Instagram more than a platform; we make
-            it your success story. Let's connect, captivate, and convert.
+            it your success story. Let's connect.
             `,
 			image: im,
 		},
@@ -63,7 +63,7 @@ const Carousel = () => {
 			id: 5,
 			title: 'Influencer Marketing',
 			description: `We connect you with voices that don't just speak but inspire.
-            Our influencer strategies build trust and community.
+            Our influencer strategies are powerful.
             `,
 			image: ifm,
 		},
@@ -133,28 +133,80 @@ const Carousel = () => {
 		},
 	]);
 	return (
-		<div>
-			<Slider {...settings}>
-				{Services.map((item) => {
-					return (
-						<div className={styles.card}>
-							<img
-								src={item.image}
-								alt=''
-							/>
-							<div
-								className={styles.serviceContextWrapper}
-							>
-								<p>{item.title}</p>
-								<p>{item.description}</p>
-								<div className={styles.contactBtn}>
-									Enquire now
-								</div>
-							</div>
-						</div>
-					);
-				})}
-			</Slider>
+		<div className={styles.wrapper}>
+			<div className={styles.left}>
+				<div className={styles.innerLeft}>
+					<div className={styles.card}>
+						<img
+							src={Services[4].image}
+							alt=''
+						/>
+						<p>Meme Marketing</p>
+						<p>
+							We make your brand viral, not just visible.
+							Our memes don't just entertain; they
+							resonate and engage
+						</p>
+					</div>
+					<div className={styles.card}>
+						<img
+							src={Services[3].image}
+							alt=''
+						/>
+						<p>Focused Instagram Marketing</p>
+						<p>
+							We make Instagram more than a platform; we
+							make it your success story. Let's connect.
+						</p>
+					</div>
+				</div>
+				<div className={styles.innerRight}>
+					<div className={styles.card}>
+						<img
+							src={Services[6].image}
+							alt=''
+						/>
+						<p>Brand Building</p>
+						<p>
+							We don't just build brands; we craft
+							legacies. Let's make your brand an
+							unforgettable experience.
+						</p>
+					</div>
+					<div className={styles.card}>
+						<img
+							src={Services[7].image}
+							alt=''
+						/>
+						<p>PR Agency</p>
+						<p>
+							We manage your reputation as we manage our
+							excellence – with integrity and finesse.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div className={styles.right}>
+				<div className={styles.headingWrapper}>
+					<div></div>
+					<p>Services</p>
+				</div>
+
+				<h3>
+					We can help you solve your problem through
+					our service
+				</h3>
+				<div className={styles.line}></div>
+				<p>
+					We are a brand strategy & digital design
+					agency building brands that matter in culture
+					with more than 5 years of experience.
+				</p>
+
+				<div className={styles.buttonMore}>
+					Explore services
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -1,0 +1,181 @@
+@mixin heading() {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.5rem;
+	color: white;
+	font-weight: 600;
+}
+
+@mixin description() {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2rem;
+	color: white;
+	font-weight: 400;
+}
+
+@mixin projectHeading() {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.05rem;
+	color: rgb(21, 21, 21);
+	font-weight: 600;
+}
+
+@mixin dateDetails() {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	color: rgb(50, 50, 50);
+	font-weight: 400;
+}
+
+.wrapper {
+	width: 100%;
+	padding: 2rem 15%;
+
+	.projectsWrapper {
+		width: 100%;
+		overflow-x: auto;
+		display: flex;
+		align-items: center;
+		margin: 2rem 0 0 0;
+		.card {
+			background-color: white;
+			padding: 1rem;
+			aspect-ratio: 1;
+			border-radius: 1rem;
+
+			&:nth-child(n + 2) {
+				margin: 0 0 0 2.5rem;
+			}
+
+			img {
+				height: 80%;
+				width: 100%;
+				object-fit: contain;
+			}
+
+			.content {
+				min-height: 20%;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.info {
+					max-width: 70%;
+					p:nth-child(1) {
+						@include projectHeading();
+					}
+
+					p:nth-child(2) {
+						margin: 0.5rem 0 0 0;
+						@include dateDetails();
+					}
+				}
+
+				.seeMore {
+					border: 1px solid transparent;
+					background-color: black;
+					padding: 1rem;
+					color: white;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 0.85rem;
+					width: 30%;
+					text-align: center;
+					border-radius: 10rem;
+					transition: all 0.2s ease-in-out;
+
+					&:hover {
+						background-color: transparent;
+						border: 1px solid rgb(42, 42, 42);
+						color: black;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+
+	.childWrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.left {
+			min-width: 50%;
+			.headingWrapper {
+				p {
+					@include description();
+				}
+				.headingContainer {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					> div {
+						width: 7rem;
+						border: 1px solid yellow;
+						height: 1px;
+					}
+
+					p {
+						font-family: 'Montserrat', sans-serif;
+						font-weight: 400;
+						font-size: 1.2rem;
+						color: yellow;
+						margin: 0 0 0 0.7rem;
+					}
+				}
+
+				.line {
+					height: 1px;
+					background-color: grey;
+					width: 35%;
+					margin: 2rem 0 1.5rem 0;
+				}
+
+				.heading {
+					margin: 1rem 0;
+					@include heading();
+				}
+			}
+		}
+
+		.right {
+			width: 50%;
+			// border: 1px solid red;
+			.arrowContainer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.Arrow {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					max-width: 4rem;
+					aspect-ratio: 1;
+					background-color: white;
+					padding: 1rem;
+					border-radius: 10rem;
+					border: 1px solid transparent;
+					transition: all 0.1s ease-in-out;
+					margin: 2rem 0 0 0;
+
+					&:nth-child(2) {
+						margin: 2rem 0 0 1rem;
+					}
+
+					svg {
+						font-size: 1.5rem;
+					}
+
+					&:hover {
+						cursor: pointer;
+						color: white;
+						background-color: transparent;
+						border: 1px solid rgb(157, 157, 157);
+					}
+				}
+			}
+		}
+	}
+}

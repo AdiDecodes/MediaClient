@@ -2,13 +2,17 @@ import React, {
 	useEffect,
 	useState,
 } from 'react';
+import { BsArrowUpRight } from 'react-icons/bs';
 import styles from '../Styles/Home.module.scss';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Loader from '../Components/Loader';
+import Testimonial from '../Components/Testimonial';
+import Projects from '../Components/Projects';
 import Carousel from '../Components/Carousel';
-import video from '../../src/assets/video.mp4';
-import logo from '../../src/assets/logoNew.jpeg';
+import Brands from '../Components/MarqueeBrands';
+import icon from '../../src/assets/home_icon.svg';
+import office from '../../src/assets/office.png';
 const Home = () => {
 	const [showLoader, setShowLoader] =
 		useState(false);
@@ -26,51 +30,103 @@ const Home = () => {
 			) : (
 				<>
 					<div /* transition-style='in:wipe:up' */>
-						{/* <Header /> */}
+						<Header />
 						<div className={styles.Main}>
-							<div className={styles.videoSection}>
-								<video
-									src={video}
-									autoPlay
-									muted
-									loop
-								/>
-							</div>
-							<div className={styles.aboutUs}>
-								<div className={styles.Aboutwrapper}>
-									<p className={styles.mainHeading}>
-										Who are we?
-									</p>
-									<p className={styles.description}>
-										We are Firdaus Media, the leaders of
-										digital excellence with over 7 years of
-										proven success. Our team of marketing
-										maestros don't just follow trends; we
-										set them. We understand your vision,
-										align it with our innovation, and create
-										strategies that translate into tangible
-										triumphs. From Instagram mastery to
-										reaching your target audience with
-										precision, we've got the expertise, the
-										creativity, and the confidence to take
-										your brand to unparalleled heights.
-										Partner with us, and let's redefine
-										success together.
-									</p>
+							<div className={styles.section1}>
+								<div className={styles.left}>
+									<h1>
+										Take your business to the moon . .
+									</h1>
+									<div
+										className={styles.contactBtn}
+										onClick={() => {
+											window.open('/contact', '_blank');
+										}}
+									>
+										<p>Enquire Now</p>
+										<BsArrowUpRight />
+									</div>
 								</div>
-								<div className={styles.imageContainer}>
+								<div className={styles.right}>
 									<img
-										src={logo}
+										src={icon}
 										alt=''
 									/>
 								</div>
 							</div>
+							<div className={styles.brand}>
+								<p>Our Partner Brands</p>
+								<Brands />
+							</div>
 							<div className={styles.services}>
-								<p className={styles.heading}>Services</p>
-								<p className={styles.description}>
-									Have a look at services we are offering!
-								</p>
-								<Carousel />
+								<div className={styles.serviceWrapper}>
+									<Carousel />
+								</div>
+							</div>
+							<div className={styles.stats}>
+								<div className={styles.section}>
+									<p>300+</p>
+									<p>Jobs Complete</p>
+								</div>
+								<div className={styles.line}></div>
+								<div className={styles.section}>
+									<p>4K+</p>
+									<p>Happy Customers</p>
+								</div>
+								<div className={styles.line}></div>
+								<div className={styles.section}>
+									<p>5+</p>
+									<p>Years of Experience</p>
+								</div>
+								<div className={styles.line}></div>
+								<div className={styles.section}>
+									<p>200+</p>
+									<p>Valuable Feedbacks</p>
+								</div>
+							</div>
+							<div className={styles.aboutUs}>
+								<div className={styles.left}>
+									<div className={styles.headingWrapper}>
+										<div />
+										<p>Who We Are</p>
+									</div>
+									<h3>
+										Providing creative and technology
+										services for growing brands
+									</h3>
+									<div className={styles.line}></div>
+									<p>
+										Our company specializes in research,
+										brand building, PR Services, Meme
+										Marketing, Instagram Marketing, SEO/SEM
+										services and much more. To help our
+										clinets improve their businesses, we
+										work with them all over the world.
+									</p>
+									<div className={styles.buttonMore}>
+										Explore service
+									</div>
+								</div>
+								<div className={styles.right}>
+									<img
+										src={office}
+										alt=''
+									/>
+								</div>
+							</div>
+							<Projects />
+							<Testimonial />
+							<div className={styles.contactUs}>
+								<div className={styles.InfoWrapper}>
+									<h3>Have a Project In Mind ?</h3>
+									<p>
+										Let's talk about your brand or
+										requirement
+									</p>
+								</div>
+								<div className={styles.discussBtn}>
+									Let's discuss
+								</div>
 							</div>
 						</div>
 						<Footer />

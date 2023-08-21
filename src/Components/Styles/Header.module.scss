@@ -4,9 +4,9 @@
 .wrapper {
 	top: 0;
 	left: 0;
-	opacity: 0.8;
+	opacity: 1;
 	position: absolute;
-	background-color: transparent;
+	background-color: #1e1e1e;
 	height: 5rem;
 	width: 100%;
 	display: flex;
@@ -18,7 +18,7 @@
 
 	.title {
 		font-weight: 500;
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 		padding: 1rem;
 		color: aliceblue;
 	}
@@ -29,20 +29,20 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		font-weight: 500;
 
-		& a {
+		& p {
 			all: unset;
 			color: rgb(255, 255, 255);
 			transition: all 0.2s ease-in-out;
 		}
 
-		& a:nth-child(n + 2) {
+		& p:nth-child(n + 2) {
 			padding: 0 0 0 2.5rem;
 		}
 
-		& a:hover {
+		& p:hover {
 			cursor: pointer;
 			color: var(--phc);
 		}

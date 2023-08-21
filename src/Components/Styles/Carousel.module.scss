@@ -11,68 +11,227 @@
 @mixin serviceHeading {
 	margin: 0 0 0.5rem 0;
 	font-weight: 600;
-	font-size: 2rem;
-	font-family: br;
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
 	color: black;
+	min-height: 20%;
+}
+
+@mixin cardHover {
+	background-color: transparent;
+	color: white;
+	border: 1px solid grey;
+	cursor: pointer;
+
+	p {
+		color: white;
+
+		&:nth-child(3) {
+			color: aliceblue;
+		}
+	}
 }
 
 @mixin serviceDescription {
 	font-weight: 500;
-	font-size: 1.1rem;
-	font-family: 'Montserrat';
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
 	color: black;
+	margin: 0 0 1rem 0;
 }
 
-.card {
-	background-color: aliceblue;
-	min-height: 30vh;
-	height: 65vh;
-	max-height: 100vh;
-	padding: 2rem;
+.wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-	.serviceContextWrapper {
+	.left {
+		padding: 1rem;
+		min-height: 100%;
+		height: 100%;
 		display: flex;
-		flex-direction: column;
-		height: 50%;
-		margin: 0 0 0 1rem;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		justify-content: center;
 
-		p:nth-child(1) {
-			@include serviceHeading();
+		.innerRight {
+			height: 100%;
+			margin: 0 0 0 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.card {
+				height: 20rem;
+				aspect-ratio: 1;
+				background-color: aliceblue;
+				overflow: hidden;
+				border-radius: 1rem;
+				border: 1px solid transparent;
+				padding: 2rem;
+				transition: all 0.2s ease-in-out;
+
+				&:hover {
+					@include cardHover();
+				}
+
+				p {
+					font-size: 1.2rem;
+					font-family: 'Montserrat', sans-serif;
+					color: rgb(0, 0, 0);
+					text-align: left;
+					width: 100%;
+					font-weight: 600;
+					transition: all 0.2s ease-in-out;
+					margin: 0 0 0.5rem 0;
+
+					&:nth-child(3) {
+						font-size: 1rem;
+						font-weight: 400;
+						font-family: 'Montserrat', sans-serif;
+						color: rgb(120, 120, 120);
+						text-align: left;
+						width: 100%;
+						transition: all 0.2s ease-in-out;
+					}
+				}
+
+				img {
+					height: 5rem;
+					margin: 0 0 1rem 0;
+				}
+
+				&:nth-child(2) {
+					margin: 1rem 0 0 0;
+				}
+			}
 		}
 
-		p:nth-child(2) {
-			@include serviceDescription();
-		}
+		.innerLeft {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 
-		.contactBtn {
-			font-weight: 500;
-			font-family: 'Montserrat';
-			padding: 1rem;
-			background-color: rgb(255, 166, 0);
-			width: fit-content;
-			margin: 1.5rem 0 0 0;
-			border: 1px solid transparent;
-			transition: all 0.1s ease-in-out;
+			.card {
+				height: 20rem;
+				aspect-ratio: 1;
+				background-color: aliceblue;
+				overflow: hidden;
+				border-radius: 1rem;
+				border: 1px solid transparent;
+				padding: 2rem;
+				transition: all 0.2s ease-in-out;
 
-			&:hover {
-				border: 1px solid rgb(0, 0, 0);
-				cursor: pointer;
-				background-color: transparent;
-				color: rgb(0, 0, 0);
-				transform: scale(1.03);
+				&:hover {
+					@include cardHover();
+				}
+
+				p {
+					font-size: 1.2rem;
+					font-family: 'Montserrat', sans-serif;
+					color: rgb(0, 0, 0);
+					text-align: left;
+					width: 100%;
+					font-weight: 600;
+					transition: all 0.2s ease-in-out;
+					margin: 0 0 0.5rem 0;
+
+					&:nth-child(3) {
+						font-size: 1rem;
+						font-weight: 400;
+						font-family: 'Montserrat', sans-serif;
+						color: rgb(120, 120, 120);
+						text-align: left;
+						width: 100%;
+						transition: all 0.2s ease-in-out;
+					}
+				}
+
+				img {
+					height: 5rem;
+					margin: 0 0 1rem 0;
+				}
+
+				&:nth-child(2) {
+					margin: 1rem 0 0 0;
+				}
 			}
 		}
 	}
 
-	// &:nth-child(n + 2) {
-	// 	margin: 1rem;
-	// }
+	.right {
+		max-width: 30%;
+		height: 100%;
+		margin: 0 0 0 5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
 
-	img {
-		height: 50%;
-		object-fit: contain;
-		aspect-ratio: 1;
-		width: 40%;
-		margin: 0 0 3rem 0;
+		.headingWrapper {
+			display: flex;
+			align-items: center;
+			div {
+				width: 7rem;
+				border: 1px solid yellow;
+				height: 1px;
+			}
+
+			p {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 400;
+				font-size: 1.2rem;
+				color: yellow;
+				margin: 0 0 0 0.7rem;
+			}
+		}
+
+		h3 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 600;
+			font-size: 2.5rem;
+			color: aliceblue;
+			margin: 1rem 0 2rem 0;
+		}
+
+		.line {
+			height: 1px;
+			background-color: grey;
+			width: 90%;
+			margin: 0 0 1.5rem 0;
+		}
+
+		p {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			font-size: 1.1rem;
+			color: aliceblue;
+			line-height: 1.7rem;
+		}
+
+		.buttonMore {
+			padding: 1rem 2rem;
+			background-color: white;
+			border-radius: 10rem;
+			margin: 1.5rem 0;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			font-size: 1.1rem;
+			border: 1px solid transparent;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				cursor: pointer;
+				background-color: transparent;
+				border: 1px solid grey;
+				color: white;
+			}
+		}
 	}
 }
