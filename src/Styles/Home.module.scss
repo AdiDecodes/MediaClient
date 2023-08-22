@@ -35,6 +35,7 @@
 }
 
 .MainWrapper {
+	overflow: auto;
 	background-color: #313131;
 
 	.Main {
@@ -193,36 +194,27 @@
 
 		.services {
 			padding: 2rem 0;
-			.serviceWrapper {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 100%;
-				min-height: 60vh;
-				height: 80vh;
-				padding: 0 4rem;
-			}
 		}
 
 		.stats {
 			background-color: white;
-			height: 20vh;
-			padding: 0 5rem;
+			padding: 2rem 5rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			width: 100%;
+			display: flex;
 
 			.line {
 				height: 50%;
 				width: 1px;
 				border: 1px solid rgb(195, 195, 195);
-				margin: 0 1rem;
+				margin: 0 3rem;
 			}
 
 			.section {
-				aspect-ratio: 2;
-				height: 100%;
-				padding: 2rem;
+				padding: 1rem;
+				width: 15%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -232,11 +224,11 @@
 					color: rgb(19, 19, 19);
 					font-family: 'Montserrat', sans-serif;
 					font-weight: 700;
-					font-size: 3rem;
+					font-size: 2rem;
 				}
 
 				p:nth-child(2) {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 					font-weight: 400;
 					font-family: 'Montserrat', sans-serif;
 					color: rgb(42, 42, 42);
@@ -342,4 +334,286 @@
 [transition-style='in:wipe:up'] {
 	animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1)
 		wipe-in-up both;
+}
+
+@media (max-width: 600px) {
+	.MainWrapper {
+		overflow: auto;
+		background-color: #313131;
+
+		.Main {
+			background-color: #1e1e1e;
+			min-height: 100vh;
+
+			.contactUs {
+				height: 25vh;
+				background-color: white;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 1rem 15%;
+
+				.InfoWrapper {
+					h3 {
+						@include heading();
+					}
+
+					p {
+						color: rgb(49, 49, 49);
+						font-family: 'Montserrat', sans-serif;
+						font-size: 1.5rem;
+						margin: 0.5rem 0 0 0;
+					}
+				}
+
+				.discussBtn {
+					background-color: black;
+					padding: 1rem 2rem;
+					color: white;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1.5rem;
+					height: fit-content;
+					border-radius: 10rem;
+					border: 1px solid transparent;
+					transition: all 0.2s ease-in-out;
+					&:hover {
+						cursor: pointer;
+						color: #1e1e1e;
+						background-color: transparent;
+						border: 1px solid black;
+					}
+				}
+			}
+
+			.brand {
+				p {
+					font-size: 1.5rem;
+					font-weight: 600;
+					font-family: 'Montserrat', sans-serif;
+					color: #ffffff;
+					margin: 0 0 2.5rem 0;
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			.aboutUs {
+				height: auto;
+				padding: 1rem 5%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column-reverse;
+
+				.left {
+					max-width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					.headingWrapper {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+
+						> div {
+							width: 7rem;
+							border: 1px solid yellow;
+							height: 1px;
+						}
+
+						p {
+							font-family: 'Montserrat', sans-serif;
+							font-weight: 400;
+							font-size: 1.2rem;
+							color: yellow;
+							margin: 0 0 0 0.7rem;
+						}
+					}
+
+					h3 {
+						font-family: 'Montserrat', sans-serif;
+						color: #ffffff;
+						font-weight: 600;
+						font-size: 2.7rem;
+						margin: 1rem 0 2rem 0;
+						max-width: 100%;
+					}
+
+					.line {
+						height: 1px;
+						background-color: grey;
+						width: 90%;
+						margin: 0 0 1.5rem 0;
+					}
+
+					p {
+						font-family: 'Montserrat', sans-serif;
+						font-weight: 300;
+						font-size: 1.1rem;
+						color: aliceblue;
+						line-height: 1.7rem;
+					}
+
+					.buttonMore {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 1rem 2rem;
+						background-color: white;
+						border-radius: 10rem;
+						margin: 1.5rem 0;
+						font-family: 'Montserrat', sans-serif;
+						font-weight: 500;
+						font-size: 1.1rem;
+						border: 1px solid transparent;
+						width: 100%;
+						transition: all 0.2s ease-in-out;
+
+						&:hover {
+							cursor: pointer;
+							background-color: transparent;
+							border: 1px solid grey;
+							color: white;
+						}
+					}
+				}
+
+				.right {
+					width: 100%;
+					aspect-ratio: 1;
+					margin: 0 0 0 0rem;
+
+					img {
+						aspect-ratio: 1;
+						height: 100%;
+						width: 100%;
+						object-fit: contain;
+					}
+				}
+			}
+
+			.services {
+				padding: 2rem 0;
+			}
+
+			.stats {
+				background-color: white;
+				padding: 2rem 5rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				display: flex;
+
+				.line {
+					height: 50%;
+					width: 1px;
+					border: 1px solid rgb(195, 195, 195);
+					margin: 0 3rem;
+				}
+
+				.section {
+					padding: 1rem;
+					width: 15%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					p:first-child {
+						color: rgb(19, 19, 19);
+						font-family: 'Montserrat', sans-serif;
+						font-weight: 700;
+						font-size: 2rem;
+					}
+
+					p:nth-child(2) {
+						font-size: 1.2rem;
+						font-weight: 400;
+						font-family: 'Montserrat', sans-serif;
+						color: rgb(42, 42, 42);
+						margin: 0.3rem 0 0 0;
+					}
+				}
+			}
+
+			.section1 {
+				padding: 1rem 5%;
+				height: calc(100vh - 5rem);
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column-reverse;
+
+				.left {
+					width: 100%;
+					height: 100vh;
+					display: flex;
+					justify-content: center;
+					align-items: flex-start;
+					flex-direction: column;
+
+					h1 {
+						font-size: 4rem;
+						color: #ffffff;
+						font-weight: 900;
+						font-family: 'Montserrat', sans-serif;
+					}
+
+					.contactBtn {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 1.5rem;
+						min-width: 100%;
+						background-color: yellow;
+						transition: all 0.2s ease;
+						margin: 2rem 0 0 0;
+						border: 1px solid transparent;
+
+						svg {
+							font-size: 1.5rem;
+							margin: 0 0 0 1rem;
+						}
+
+						p {
+							font-family: 'Montserrat', sans-serif;
+							font-weight: 500;
+							font-size: 1.4rem;
+						}
+
+						&:hover {
+							background-color: transparent;
+							border: 1px solid white;
+							cursor: pointer;
+							color: #ffffff;
+						}
+					}
+				}
+
+				.right {
+					height: 50vh;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					padding: 0 0 0 0;
+					img {
+						aspect-ratio: 1;
+						width: 100%;
+						object-fit: contain;
+						animation: bounce 5s infinite;
+
+						&::selection {
+							pointer-events: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }

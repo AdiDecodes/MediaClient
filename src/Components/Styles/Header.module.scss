@@ -16,6 +16,10 @@
 	font-family: 'Montserrat', sans-serif;
 	position: relative;
 
+	.menuBtn {
+		display: none;
+	}
+
 	.title {
 		font-weight: 500;
 		font-size: 1.1rem;
@@ -88,6 +92,59 @@
 
 @media (max-width: 600px) {
 	.wrapper {
-		padding: 0.5rem;
+		top: 0;
+		left: 0;
+		opacity: 1;
+		position: absolute;
+		background-color: #1e1e1e;
+		height: 5rem;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 3rem;
+		align-items: center;
+		font-family: 'Montserrat', sans-serif;
+		position: relative;
+
+		.title {
+			font-weight: 500;
+			font-size: 1.1rem;
+			padding: 1rem;
+			color: aliceblue;
+		}
+
+		.menuBtn {
+			display: block;
+
+			svg {
+				font-size: 2rem;
+				color: white;
+			}
+		}
+
+		.menuWrapper {
+			padding: 0 2rem;
+			height: 2rem;
+			display: none;
+			justify-content: flex-start;
+			align-items: center;
+			font-size: 1rem;
+			font-weight: 500;
+
+			& p {
+				all: unset;
+				color: rgb(255, 255, 255);
+				transition: all 0.2s ease-in-out;
+			}
+
+			& p:nth-child(n + 2) {
+				padding: 0 0 0 2.5rem;
+			}
+
+			& p:hover {
+				cursor: pointer;
+				color: var(--phc);
+			}
+		}
 	}
 }

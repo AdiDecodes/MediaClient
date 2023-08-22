@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Styles/Header.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineMenu } from 'react-icons/ai';
 const Header = () => {
 	const navigate = useNavigate();
 	const [showSidebar, setSidebar] =
@@ -45,15 +46,16 @@ const Header = () => {
 					Brands
 				</p>
 			</div>
+			<div className={styles.menuBtn}>
+				<AiOutlineMenu />
+			</div>
 			<div
 				className={
 					showSidebar
 						? `${styles.sidebar}${styles.open}`
 						: styles.sidebar
 				}
-			>
-				hii
-			</div>
+			></div>
 		</div>
 	);
 };
