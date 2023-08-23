@@ -16,7 +16,7 @@ const Projects = () => {
 			img: 'https://i0.wp.com/deshicompanies.com/wp-content/uploads/2021/06/Mamaearth-company.png?fit=1280%2C720&ssl=1',
 		},
 		{
-			id: 0,
+			id: 1,
 			title: 'MamaEarth',
 			description:
 				'Instagram Marketing | 19th june, 2022',
@@ -24,7 +24,7 @@ const Projects = () => {
 			img: 'https://i0.wp.com/deshicompanies.com/wp-content/uploads/2021/06/Mamaearth-company.png?fit=1280%2C720&ssl=1',
 		},
 		{
-			id: 0,
+			id: 2,
 			title: 'MamaEarth',
 			description:
 				'Instagram Marketing | 19th june, 2022',

@@ -101,21 +101,42 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		padding: 0 3rem;
+		padding: 0 1rem;
 		align-items: center;
 		font-family: 'Montserrat', sans-serif;
 		position: relative;
 
+		.sidebar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			max-width: 300px;
+			width: 80%;
+			height: 100%;
+			padding: 2rem;
+			background-color: black;
+			box-shadow: 0 10px 20px -4px #000;
+			overflow-x: hidden;
+			overflow-y: auto;
+			pointer-events: none;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-100%);
+			transition: opacity 0.3s ease,
+				visibility 0.2s ease, transform 0.3s ease;
+		}
+
 		.title {
 			font-weight: 500;
 			font-size: 1.1rem;
-			padding: 1rem;
+			padding: 1rem 1rem 1rem 0;
 			color: aliceblue;
+			text-align: left;
 		}
 
 		.menuBtn {
 			display: block;
-
 			svg {
 				font-size: 2rem;
 				color: white;
