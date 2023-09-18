@@ -46,13 +46,13 @@ const Projects = () => {
 						</h3>
 						<div className={styles.line}></div>
 						<p>
-							We build product close to our heart. We
-							make your idea to reality and make your
-							dream successful with awesome experience.
+							We passionately bring your ideas to life,
+							making your dreams a successful reality
+							with an amazing experience.
 						</p>
 					</div>
 				</div>
-				<div className={styles.right}>
+				{/* <div className={styles.right}>
 					<div className={styles.arrowContainer}>
 						<div className={styles.Arrow}>
 							<BsArrowLeft />
@@ -61,7 +61,7 @@ const Projects = () => {
 							<BsArrowRight />
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 
 			<div className={styles.projectsWrapper}>

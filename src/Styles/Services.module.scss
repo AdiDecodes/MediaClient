@@ -1,0 +1,171 @@
+@font-face {
+	font-family: 'bb';
+	src: url('../Fonts/BarlowCondensed-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'br';
+	src: url('../Fonts/BarlowCondensed-Regular.ttf');
+}
+
+@mixin heading-dark {
+	font-size: 3rem;
+	font-family: bb;
+	text-shadow: 1px 3px red;
+	color: #222222;
+}
+
+@mixin heading {
+	font-size: 1.3rem;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin description-dark {
+	font-size: 1.6rem;
+	color: #222222;
+	font-family: br;
+	font-weight: 600;
+}
+
+@mixin description {
+	font-size: 1.1rem;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0.5rem 0 0 0;
+}
+
+.wrapper {
+	background-color: #1e1e1e;
+	min-height: 100vh;
+	width: 100%;
+
+	.innerWrapper {
+		padding: 0 3.2%;
+		min-height: calc(100vh - 5rem);
+		.heading {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 2rem;
+			color: #fff;
+			margin: 1rem 0 0 0;
+		}
+
+		.description {
+			margin: 0.5rem 0 0 0;
+			font-weight: 300;
+			color: rgb(237, 237, 237);
+			@include description();
+		}
+
+		.servicelayout {
+			padding: 2rem 0 2rem 0;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+
+			.serviceCard {
+				overflow: hidden;
+				border-radius: 1rem;
+				flex-basis: calc(32.33% - 10px);
+				max-width: calc(32.33% - 10px);
+				border: 1px solid #575757;
+				min-height: 30vh;
+				height: 30vh;
+				display: flex;
+
+				.image {
+					width: 40%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					img {
+						width: 50%;
+						height: 50%;
+						object-fit: contain;
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
+
+				.info {
+					background-color: white;
+					border-left: 1px solid #575757;
+					width: 60%;
+					padding: 1rem 1.5rem;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					overflow: hidden;
+					word-wrap: break-word;
+					height: auto;
+
+					.headingInfo {
+						@include heading();
+					}
+
+					.descriptionInfo {
+						overflow: auto;
+						&::-webkit-scrollbar {
+							display: none;
+						}
+
+						@include description();
+					}
+
+					.serviceSelect {
+						text-overflow: clip;
+						width: 100%;
+						max-width: 100%;
+						border: 1px solid #797979;
+						border-radius: 0.2rem;
+						text-align: center;
+						color: #1e1e1e;
+						font-family: 'Open Sans', sans-serif;
+						font-size: 1.2rem;
+						font-weight: 400;
+						padding: 0.5rem 1rem;
+						margin: 1rem 0 0 0;
+						transition: all 0.2s ease-in-out;
+
+						&:hover {
+							border: 1px solid transparent;
+							background-color: #353535;
+							color: #d6d6d6;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.wrapper {
+		.innerWrapper {
+			.heading {
+				color: white;
+				font-size: 2.2rem;
+			}
+			.servicelayout {
+				.serviceCard {
+					flex-basis: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// @media (max-width: 600px) {
+// 	.wrapper {
+// 		.innerWrapper {
+// 			.servicelayout {
+// 				.serviceCard {
+// 					flex-basis: 100%;
+// 					max-width: 100%;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from '../src/Pages/Home';
 import Contact from '../src/Pages/Contact';
+import Services from '../src/Pages/Services';
 import Error from '../src/Pages/Error';
-import '../src/index.css';
+import '../src/index.scss';
 import {
 	BrowserRouter,
 	Routes,
@@ -23,6 +24,10 @@ ReactDOM.createRoot(
 				<Route
 					path='/contact'
 					element={<Contact />}
+				/>
+				<Route
+					path='/services'
+					element={<Services />}
 				/>
 				<Route
 					path='*'

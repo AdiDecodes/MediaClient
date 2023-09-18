@@ -309,7 +309,15 @@ const Contact = () => {
 							<h3>contact@firdausmedia.com</h3>
 						</div>
 						<div className={styles.socials}>
-							<div className={styles.iconHolder}>
+							<div
+								className={styles.iconHolder}
+								onClick={() => {
+									window.open(
+										'https://www.instagram.com/firdausxmedia/',
+										'_blank'
+									);
+								}}
+							>
 								<AiOutlineInstagram />
 							</div>
 							<div className={styles.iconHolder}>

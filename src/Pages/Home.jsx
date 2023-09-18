@@ -1,5 +1,6 @@
 import React, {
 	useEffect,
+	useRef,
 	useState,
 } from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
@@ -13,14 +14,18 @@ import Carousel from '../Components/Carousel';
 import Brands from '../Components/MarqueeBrands';
 import icon from '../../src/assets/home_icon.svg';
 import office from '../../src/assets/office.png';
+import ScrolltoTop from '../Components/scrollBtn';
+
 const Home = () => {
+	const brandRef = useRef(null);
+	const projectRef = useRef(null);
 	const [showLoader, setShowLoader] =
 		useState(false);
 
 	useEffect(() => {
 		setTimeout(() => {
 			setShowLoader(false);
-		}, 2000);
+		}, 750);
 	}, []);
 
 	return (
@@ -30,7 +35,10 @@ const Home = () => {
 			) : (
 				<>
 					<div /* transition-style='in:wipe:up' */>
-						<Header />
+						<ScrolltoTop />
+						<Header
+							element={{ brandRef, projectRef }}
+						/>
 						<div className={styles.Main}>
 							<div className={styles.section1}>
 								<div className={styles.left}>
@@ -54,7 +62,11 @@ const Home = () => {
 									/>
 								</div>
 							</div>
-							<div className={styles.brand}>
+							<div
+								ref={brandRef}
+								id='brand'
+								className={styles.brand}
+							>
 								<p>Our Partner Brands</p>
 								<Brands />
 							</div>
@@ -100,10 +112,15 @@ const Home = () => {
 										brand building, PR Services, Meme
 										Marketing, Instagram Marketing, SEO/SEM
 										services and much more. To help our
-										clinets improve their businesses, we
+										clients improve their businesses, we
 										work with them all over the world.
 									</p>
-									<div className={styles.buttonMore}>
+									<div
+										className={styles.buttonMore}
+										onClick={() => {
+											window.open('/services', '_blank');
+										}}
+									>
 										Explore service
 									</div>
 								</div>
@@ -114,7 +131,10 @@ const Home = () => {
 									/>
 								</div>
 							</div>
-							<Projects />
+							<div ref={projectRef}>
+								<Projects />
+							</div>
+
 							<Testimonial />
 							<div className={styles.contactUs}>
 								<div className={styles.InfoWrapper}>
@@ -124,7 +144,12 @@ const Home = () => {
 										requirement
 									</p>
 								</div>
-								<div className={styles.discussBtn}>
+								<div
+									className={styles.discussBtn}
+									onClick={() => {
+										window.open('/contact', '_blank');
+									}}
+								>
 									Let's discuss
 								</div>
 							</div>

@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, {
+	useEffect,
+	useState,
+} from 'react';
 import styles from './Styles/Header.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
-const Header = () => {
+import logo from '../assets/logoNew.jpeg';
+const Header = ({ element }) => {
 	const navigate = useNavigate();
 	const [showSidebar, setSidebar] =
 		useState(false);
@@ -14,19 +18,28 @@ const Header = () => {
 					navigate('/');
 				}}
 			>
-				FIRDAUS MEDIA
+				<img
+					src={logo}
+					alt=''
+				/>
 			</div>
 			<div className={styles.menuWrapper}>
 				<p
 					onClick={() => {
-						navigate('/');
+						const y =
+							element.projectRef.current.getBoundingClientRect()
+								.top + window.scrollY;
+						window.scroll({
+							top: y,
+							behavior: 'smooth',
+						});
 					}}
 				>
-					Media
+					Projects
 				</p>
 				<p
 					onClick={() => {
-						navigate('/');
+						navigate('/services');
 					}}
 				>
 					Services
@@ -40,7 +53,13 @@ const Header = () => {
 				</p>
 				<p
 					onClick={() => {
-						navigate('/');
+						const y =
+							element.brandRef.current.getBoundingClientRect()
+								.top + window.scrollY;
+						window.scroll({
+							top: y,
+							behavior: 'smooth',
+						});
 					}}
 				>
 					Brands

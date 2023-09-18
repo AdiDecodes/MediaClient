@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import styles from './Styles/Carousel.module.scss';
+import styles from '../Styles/Services.module.scss';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 import dm from '../assets/dm.png';
 import am from '../assets/affiliate-marketing.png';
 import bb from '../assets/brand-building.png';
@@ -16,18 +15,8 @@ import seo from '../assets/seo-sem.png';
 import webdev from '../assets/web-dev.png';
 import ifm from '../assets/influencer-marketing.png';
 import pr from '../assets/pr.png';
-import vimdhayakJi from '../../src/assets/vimdhayak_ji.jpg';
-import doge from '../../src/assets/evil-doge.jpg';
-const Carousel = () => {
-	const settings = {
-		dots: false,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 2000,
-	};
+
+const Services = () => {
 	const [Services, setServices] = useState([
 		{
 			id: 1,
@@ -136,86 +125,55 @@ const Carousel = () => {
 	]);
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.left}>
-				<div className={styles.innerLeft}>
-					<div className={styles.card}>
-						<img
-							src={doge}
-							alt=''
-						/>
-						<p>Meme Marketing</p>
-						<p>
-							We make your brand viral, not just visible.
-							Our memes don't just entertain; they
-							resonate and engage
-						</p>
-					</div>
-					<div className={styles.card}>
-						<img
-							src={Services[3].image}
-							alt=''
-						/>
-						<p>Focused Instagram Marketing</p>
-						<p>
-							We make Instagram more than a platform; we
-							make it your success story. Let's connect.
-						</p>
-					</div>
-				</div>
-				<div className={styles.innerRight}>
-					<div className={styles.card}>
-						<img
-							src={Services[6].image}
-							alt=''
-						/>
-						<p>Brand Building</p>
-						<p>
-							We don't just build brands; we craft
-							legacies. Let's make your brand an
-							unforgettable experience.
-						</p>
-					</div>
-					<div className={styles.card}>
-						<img
-							src={Services[7].image}
-							alt=''
-						/>
-						<p>PR Agency</p>
-						<p>
-							We manage your reputation as we manage our
-							excellence – with integrity and finesse.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div className={styles.right}>
-				<div className={styles.headingWrapper}>
-					<div></div>
-					<p>Services</p>
-				</div>
-
-				<h3>
-					We can help you solve your problem through
-					our service
+			<Header />
+			<div className={styles.innerWrapper}>
+				<h3 className={styles.heading}>
+					Services We Offer
 				</h3>
-				<div className={styles.line}></div>
-				<p>
-					We are a brand strategy & digital design
-					agency building brands that matter in culture
-					with more than 5 years of experience.
+				<p className={styles.description}>
+					Drive Results with Our Comprehensive Media
+					Services: Ad Run, Web Development, Meme
+					Marketing, and Beyond!
 				</p>
+				<div className={styles.servicelayout}>
+					{Services.map((service) => {
+						return (
+							<div
+								key={service.id}
+								className={styles.serviceCard}
+							>
+								<div className={styles.image}>
+									<img
+										src={service.image}
+										alt=''
+									/>
+								</div>
 
-				<div
-					className={styles.buttonMore}
-					onClick={() => {
-						window.open('/services', '_blank');
-					}}
-				>
-					Explore services
+								<div className={styles.info}>
+									<h3 className={styles.headingInfo}>
+										{service.title}
+									</h3>
+									<p className={styles.descriptionInfo}>
+										{service.description}
+									</p>
+
+									<div
+										className={styles.serviceSelect}
+										onClick={() => {
+											window.open('/contact', '_blank');
+										}}
+									>
+										Enquire
+									</div>
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };
 
-export default Carousel;
+export default Services;
