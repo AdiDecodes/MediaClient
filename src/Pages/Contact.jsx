@@ -116,51 +116,49 @@ const Contact = () => {
 		},
 	]);
 
-	useEffect(() => {
-		new FinisherHeader({
-			count: 200,
-			size: {
-				min: 2,
-				max: 8,
-				pulse: 0.1,
-			},
-			speed: {
-				x: {
-					min: 0,
-					max: 0.4,
-				},
-				y: {
-					min: 0,
-					max: 0.6,
-				},
-			},
-			colors: {
-				background: '#000000',
-				particles: [
-					'#ffffff',
-					'#ffffff',
-					'#ffffff',
-					'#ffffff',
-					'#ffffff',
-					'#ffffff',
-					'#ffffff',
-				],
-			},
-			blending: 'screen',
-			opacity: {
-				center: 1,
-				edge: 0.05,
-			},
-			skew: 0,
-			shapes: ['s', 't'],
-		});
-	}, []);
+	// useEffect(() => {
+	// 	new FinisherHeader({
+	// 		count: 200,
+	// 		size: {
+	// 			min: 2,
+	// 			max: 8,
+	// 			pulse: 0.1,
+	// 		},
+	// 		speed: {
+	// 			x: {
+	// 				min: 0,
+	// 				max: 0.4,
+	// 			},
+	// 			y: {
+	// 				min: 0,
+	// 				max: 0.6,
+	// 			},
+	// 		},
+	// 		colors: {
+	// 			background: '#000000',
+	// 			particles: [
+	// 				'#ffffff',
+	// 				'#ffffff',
+	// 				'#ffffff',
+	// 				'#ffffff',
+	// 				'#ffffff',
+	// 				'#ffffff',
+	// 				'#ffffff',
+	// 			],
+	// 		},
+	// 		blending: 'screen',
+	// 		opacity: {
+	// 			center: 1,
+	// 			edge: 0.05,
+	// 		},
+	// 		skew: 0,
+	// 		shapes: ['s', 't'],
+	// 	});
+	// }, []);
 	return (
 		<>
 			<Header />
-			<div
-				className={`${styles.Globalwrapper} header finisher-header`}
-			>
+			<div className={styles.Globalwrapper}>
 				<div className={styles.bgBlack}>
 					<div className={styles.wrapper}>
 						<h3>Get in Touch</h3>
