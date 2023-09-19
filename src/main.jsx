@@ -15,7 +15,7 @@ ReactDOM.createRoot(
 	document.getElementById('root')
 ).render(
 	<>
-		<BrowserRouter>
+		<BrowserRouter basename='/'>
 			<Routes>
 				<Route
 					path='/'

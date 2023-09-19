@@ -117,10 +117,6 @@ const Contact = () => {
 	]);
 
 	useEffect(() => {
-		console.log(formData);
-	}, [formData]);
-
-	useEffect(() => {
 		new FinisherHeader({
 			count: 200,
 			size: {
