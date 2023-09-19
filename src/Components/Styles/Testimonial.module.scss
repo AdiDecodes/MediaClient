@@ -22,7 +22,7 @@
 
 	.testimonialWrapper {
 		display: flex;
-		align-items: center;
+		align-items: stretch;
 		justify-content: flex-start;
 		margin: 4rem 0;
 		width: 100%;
@@ -30,23 +30,26 @@
 
 		.card {
 			background-color: white;
-			min-height: 20rem;
-			aspect-ratio: 1;
+			min-height: 15rem;
+			max-width: calc(33.33%);
+			width: calc(33.33%);
 			padding: 3rem 1rem 1rem 1rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-
 			&:nth-child(n + 2) {
 				margin: 0 0 0 2rem;
 			}
 
 			p {
-				font-size: 1.02rem;
+				font-size: 1.2rem;
 				color: rgb(46, 46, 46);
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 500;
 				overflow: auto;
+				margin: 0 0 1.5rem 0;
+				line-height: 2rem;
+				font-style: italic;
 
 				&::-webkit-scrollbar {
 					display: none;
@@ -70,21 +73,25 @@
 
 				.userWrapper {
 					margin: 0 0 0 1rem;
-				}
 
-				p:nth-child(1) {
-					font-family: 'Montserrat', sans-serif;
-					font-size: 1.2rem;
-					color: black;
-					font-weight: 600;
-				}
+					p:nth-child(1) {
+						font-family: 'Montserrat', sans-serif;
+						font-size: 1.2rem;
+						color: black;
+						font-weight: 600;
+						margin: 0;
+						line-height: normal;
+						font-style: normal;
+					}
 
-				p:nth-child(2) {
-					font-family: 'Montserrat', sans-serif;
-					font-size: 0.8rem;
-					color: rgb(45, 45, 45);
-					margin: 0.2rem 0 0 0;
-					font-weight: 500;
+					p:nth-child(2) {
+						font-family: 'Montserrat', sans-serif;
+						font-size: 1rem;
+						color: rgb(45, 45, 45);
+						margin: 0.2rem 0 0 0;
+						font-weight: 500;
+						font-style: normal;
+					}
 				}
 			}
 		}
@@ -126,6 +133,7 @@
 			.card {
 				background-color: white;
 				height: 20rem;
+				max-width: 100%;
 				width: 100%;
 				padding: 3rem 1rem 1rem 1rem;
 				display: flex;
@@ -137,7 +145,7 @@
 				}
 
 				p {
-					font-size: 1.02rem;
+					font-size: 1rem;
 					color: rgb(46, 46, 46);
 					font-family: 'Montserrat', sans-serif;
 					font-weight: 500;

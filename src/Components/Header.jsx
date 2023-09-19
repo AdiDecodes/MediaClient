@@ -3,9 +3,11 @@ import React, {
 	useState,
 } from 'react';
 import styles from './Styles/Header.module.scss';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import logo from '../assets/logoNew.jpeg';
+import { set } from 'date-fns';
 const Header = ({ element }) => {
 	const navigate = useNavigate();
 	const [showSidebar, setSidebar] =
@@ -26,6 +28,7 @@ const Header = ({ element }) => {
 			<div className={styles.menuWrapper}>
 				<p
 					onClick={() => {
+						navigate('/');
 						const y =
 							element.projectRef.current.getBoundingClientRect()
 								.top + window.scrollY;
@@ -53,6 +56,7 @@ const Header = ({ element }) => {
 				</p>
 				<p
 					onClick={() => {
+						navigate('/');
 						const y =
 							element.brandRef.current.getBoundingClientRect()
 								.top + window.scrollY;
@@ -65,16 +69,77 @@ const Header = ({ element }) => {
 					Brands
 				</p>
 			</div>
-			<div className={styles.menuBtn}>
+			<div
+				className={styles.menuBtn}
+				onClick={() => {
+					setSidebar(!showSidebar);
+				}}
+			>
 				<AiOutlineMenu />
 			</div>
 			<div
 				className={
 					showSidebar
-						? `${styles.sidebar}${styles.open}`
-						: styles.sidebar
+						? `${styles.sidebar} ${styles.open}`
+						: `${styles.sidebar}`
 				}
-			></div>
+			>
+				<div className={styles.closeMenu}>
+					<AiOutlineCloseCircle
+						onClick={() => {
+							setSidebar(false);
+						}}
+					/>
+				</div>
+				<div className={styles.content}>
+					<h3
+						onClick={() => {
+							navigate('/');
+							setSidebar(false);
+							const y =
+								element.projectRef.current.getBoundingClientRect()
+									.top + window.scrollY;
+							window.scroll({
+								top: y,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Projects
+					</h3>
+					<h3
+						onClick={() => {
+							setSidebar(false);
+							navigate('/services');
+						}}
+					>
+						Services
+					</h3>
+					<h3
+						onClick={() => {
+							setSidebar(false);
+							navigate('/contact');
+						}}
+					>
+						Contact
+					</h3>
+					<h3
+						onClick={() => {
+							navigate('/');
+							setSidebar(false);
+							const y =
+								element.brandRef.current.getBoundingClientRect()
+									.top + window.scrollY;
+							window.scroll({
+								top: y,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Brands
+					</h3>
+				</div>
+			</div>
 		</div>
 	);
 };

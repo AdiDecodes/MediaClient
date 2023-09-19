@@ -7,16 +7,9 @@ const Testimonial = () => {
 		useState([
 			{
 				id: 0,
-				content: `Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Error, nobis? Omnis
-                quaerat iste voluptas, itaque sed corporis
-                rerum, error, dignissimos voluptatum sunt
-                accusantium temporibus. Nulla, odio!
-                Doloremque ut dignissimos facere vero nemo
-                obcaecati aliquam doloribus illo. Dolor
-                maxime, atque ducimus odio magni sit`,
-				author: 'James Carter',
-				designation: 'Founder at JameGame.com',
+				content: `UI/UX delivered almost in no time! That was fantastic. Working with this agency not only got my work done but making connections with them was a great experience. I would love to work with them again!`,
+				author: 'Aditya Singh',
+				designation: 'Web Developer, SuperBattle.com',
 				profilepic:
 					'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
 			},

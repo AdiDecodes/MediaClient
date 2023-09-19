@@ -30,7 +30,7 @@ ReactDOM.createRoot(
 					element={<Services />}
 				/>
 				<Route
-					path='*'
+					path='/*'
 					element={<Error />}
 				/>
 			</Routes>

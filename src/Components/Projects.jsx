@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
 import styles from './Styles/Projects.module.scss';
+import memeMarketingImg from '../assets/Projects/meme-marketing.jpg';
 import {
 	BsArrowLeft,
 	BsArrowRight,
 } from 'react-icons/bs';
+import moviePromo from '../assets/Projects/movie-promo.jpg';
 
 const Projects = () => {
 	const [projectData, setProjectData] = useState([
 		{
 			id: 0,
-			title: 'MamaEarth',
-			description:
-				'Instagram Marketing | 19th june, 2022',
-			projectURL: 'https://www.google.com',
-			img: 'https://i0.wp.com/deshicompanies.com/wp-content/uploads/2021/06/Mamaearth-company.png?fit=1280%2C720&ssl=1',
+			title: 'PLAYGROUND',
+			description: 'Meme Marketing | 148M+ Views',
+			projectURL:
+				'https://www.instagram.com/reel/CeFueIrDUlb/?utm_source=ig_web_copy_link',
+			img: memeMarketingImg,
 		},
 		{
 			id: 1,
-			title: 'MamaEarth',
-			description:
-				'Instagram Marketing | 19th june, 2022',
-			projectURL: 'https://www.google.com',
-			img: 'https://i0.wp.com/deshicompanies.com/wp-content/uploads/2021/06/Mamaearth-company.png?fit=1280%2C720&ssl=1',
+			title: 'Runway 34',
+			description: 'Movie Campaign | 60M+ Reach',
+			projectURL:
+				'https://www.instagram.com/reel/CbbuL8ypH5V/',
+			img: moviePromo,
 		},
 		{
 			id: 2,

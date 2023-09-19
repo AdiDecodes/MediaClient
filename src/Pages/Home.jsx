@@ -134,7 +134,6 @@ const Home = () => {
 							<div ref={projectRef}>
 								<Projects />
 							</div>
-
 							<Testimonial />
 							<div className={styles.contactUs}>
 								<div className={styles.InfoWrapper}>
