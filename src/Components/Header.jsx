@@ -7,7 +7,6 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import logo from '../assets/logoNew.jpeg';
-import { set } from 'date-fns';
 const Header = ({ element }) => {
 	const navigate = useNavigate();
 	const [showSidebar, setSidebar] =
