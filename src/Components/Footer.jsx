@@ -28,17 +28,15 @@ const Footer = () => {
 
 				<div className={styles.section2}>
 					<h3>Services</h3>
-					<p>Media</p>
-					<p>Title</p>
-					<p>Title</p>
-					<p>Title</p>
+					<p>Projects</p>
+					<p>Services</p>
+					<p>Brands</p>
 				</div>
 				<div className={styles.section2}>
 					<h3>Company</h3>
 					<p>About Us</p>
 					<p>Contact Us</p>
 					<p>Privacy Policy</p>
-					<p>Become a partner</p>
 				</div>
 			</div>
 			<div className={styles.divider}></div>

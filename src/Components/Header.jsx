@@ -7,10 +7,30 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import logo from '../assets/logoNew.jpeg';
+import gsap from 'gsap';
 const Header = ({ element }) => {
+	// const t1 = gsap.timeline({ paused: true });
+	// useEffect(() => {
+	// 	t1.to('.sidebar', {
+	// 		y: '0',
+	// 		opacity: 1,
+	// 		ease: 'Expo.easeOut',
+	// 		stagger: 0.1,
+	// 	});
+	// });
+
 	const navigate = useNavigate();
 	const [showSidebar, setSidebar] =
 		useState(false);
+
+	useEffect(() => {
+		if (showSidebar) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+			// t1.play();
+		}
+	}, [showSidebar]);
 	return (
 		<div className={styles.wrapper}>
 			<div

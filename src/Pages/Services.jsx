@@ -124,54 +124,59 @@ const Services = () => {
 		},
 	]);
 	return (
-		<div className={styles.wrapper}>
-			<Header />
-			<div className={styles.innerWrapper}>
-				<h3 className={styles.heading}>
-					Services We Offer
-				</h3>
-				<p className={styles.description}>
-					Drive Results with Our Comprehensive Media
-					Services: Ad Run, Web Development, Meme
-					Marketing, and Beyond!
-				</p>
-				<div className={styles.servicelayout}>
-					{Services.map((service) => {
-						return (
-							<div
-								key={service.id}
-								className={styles.serviceCard}
-							>
-								<div className={styles.image}>
-									<img
-										src={service.image}
-										alt=''
-									/>
-								</div>
+		<div className={styles.transitionWrapper}>
+			<div className={styles.wrapper}>
+				<Header />
+				<div
+					className={styles.innerWrapper}
+					transition-style='in:wipe:up'
+				>
+					<h3 className={styles.heading}>
+						Services We Offer
+					</h3>
+					<p className={styles.description}>
+						Drive Results with Our Comprehensive Media
+						Services: Ad Run, Web Development, Meme
+						Marketing, and Beyond!
+					</p>
+					<div className={styles.servicelayout}>
+						{Services.map((service) => {
+							return (
+								<div
+									key={service.id}
+									className={styles.serviceCard}
+								>
+									<div className={styles.image}>
+										<img
+											src={service.image}
+											alt=''
+										/>
+									</div>
 
-								<div className={styles.info}>
-									<h3 className={styles.headingInfo}>
-										{service.title}
-									</h3>
-									<p className={styles.descriptionInfo}>
-										{service.description}
-									</p>
+									<div className={styles.info}>
+										<h3 className={styles.headingInfo}>
+											{service.title}
+										</h3>
+										<p className={styles.descriptionInfo}>
+											{service.description}
+										</p>
 
-									<div
-										className={styles.serviceSelect}
-										onClick={() => {
-											window.open('/contact', '_blank');
-										}}
-									>
-										Enquire
+										<div
+											className={styles.serviceSelect}
+											onClick={() => {
+												window.open('/contact', '_blank');
+											}}
+										>
+											Enquire
+										</div>
 									</div>
 								</div>
-							</div>
-						);
-					})}
+							);
+						})}
+					</div>
 				</div>
+				<Footer />
 			</div>
-			<Footer />
 		</div>
 	);
 };

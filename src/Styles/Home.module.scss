@@ -37,10 +37,10 @@
 .MainWrapper {
 	position: relative;
 	overflow: hidden;
-	background-color: #eaeaea;
+	background-color: #1d1d1d;
 
 	.toUpBtn {
-		z-index: 99;
+		z-index: 9;
 		position: fixed;
 		bottom: 1rem;
 		right: 1rem;
@@ -356,7 +356,7 @@
 @media (max-width: 600px) {
 	.MainWrapper {
 		overflow: auto;
-		background-color: #313131;
+		background-color: #1d1d1d;
 
 		.Main {
 			background-color: #1e1e1e;
@@ -586,7 +586,7 @@
 					flex-direction: column;
 
 					h1 {
-						font-size: 3rem;
+						font-size: 2.5rem;
 						color: #ffffff;
 						font-weight: 900;
 						font-family: 'Montserrat', sans-serif;

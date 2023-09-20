@@ -15,12 +15,13 @@ import Brands from '../Components/MarqueeBrands';
 import icon from '../../src/assets/home_icon.svg';
 import office from '../../src/assets/office.png';
 import ScrolltoTop from '../Components/scrollBtn';
+import { sassTrue } from 'sass';
 
 const Home = () => {
 	const brandRef = useRef(null);
 	const projectRef = useRef(null);
 	const [showLoader, setShowLoader] =
-		useState(false);
+		useState(sassTrue);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -34,7 +35,7 @@ const Home = () => {
 				<Loader />
 			) : (
 				<>
-					<div /* transition-style='in:wipe:up' */>
+					<div transition-style='in:wipe:up'>
 						<ScrolltoTop />
 						<Header
 							element={{ brandRef, projectRef }}
@@ -78,11 +79,11 @@ const Home = () => {
 							<div className={styles.stats}>
 								<div className={styles.section}>
 									<p>300+</p>
-									<p>Jobs Complete</p>
+									<p>Campaigns Completed</p>
 								</div>
 								<div className={styles.line}></div>
 								<div className={styles.section}>
-									<p>4K+</p>
+									<p>2K+</p>
 									<p>Happy Customers</p>
 								</div>
 								<div className={styles.line}></div>
@@ -92,7 +93,7 @@ const Home = () => {
 								</div>
 								<div className={styles.line}></div>
 								<div className={styles.section}>
-									<p>200+</p>
+									<p>250+</p>
 									<p>Valuable Feedbacks</p>
 								</div>
 							</div>

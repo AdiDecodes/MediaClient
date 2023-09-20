@@ -25,6 +25,10 @@ const Contact = () => {
 		message: '~~~~~None~~~~~',
 	});
 
+	useEffect(() => {
+		console.log(formData);
+	}, [formData]);
+
 	const SubmitClicked = () => {
 		const isEmpty = Object.values(formData).some(
 			(value) => value === null || value === ''
@@ -32,14 +36,14 @@ const Contact = () => {
 
 		if (!isEmpty) {
 			const validatePhone = (num) => {
-				const regex = /^\\d{12}$/;
-				const isValid = regex.test(num);
+				const regexP = /^(\+91|0)?[6789]\d{9}$/;
+				const isValid = regexP.test(num);
 				return isValid;
 			};
 
 			const validateEmail = (email) => {
 				const regex =
-					/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z]{2,})+$/;
+					/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 				const isValid = regex.test(email);
 				return isValid;
 			};
@@ -156,9 +160,12 @@ const Contact = () => {
 	// 	});
 	// }, []);
 	return (
-		<>
+		<div className={styles.transitionWrapper}>
 			<Header />
-			<div className={styles.Globalwrapper}>
+			<div
+				className={styles.Globalwrapper}
+				transition-style='in:wipe:up'
+			>
 				<div className={styles.bgBlack}>
 					<div className={styles.wrapper}>
 						<h3>Get in Touch</h3>
@@ -255,7 +262,7 @@ const Contact = () => {
 									} else {
 										setFormData((prev) => ({
 											...prev,
-											message: '~~~~~None~~~~~',
+											message: '~~None~~',
 										}));
 									}
 								}}
@@ -275,20 +282,21 @@ const Contact = () => {
 							className={styles.contactInfo}
 							onClick={() => {
 								window.open(
-									'https://goo.gl/maps/wyk6TRMwgubjscgv6',
+									'https://maps.app.goo.gl/UyyjbzNHPYk4jprVA',
 									'!blank'
 								);
 							}}
 						>
 							<LuMapPin />
 							<h3>
-								59, Marathahalli Building, Pushkar,
-								Rajathan, 494212
+								S37, 2nd floor, KRW executive center, Plot
+								No. 270, Phase 2, Udyog Vihar, Sector 20,
+								Gurugram, Haryana 122016
 							</h3>
 						</div>
 						<div className={styles.contactInfo}>
 							<BsPhoneVibrate />
-							<h3>+91 85458 65895</h3>
+							<h3>+91 82788 16765</h3>
 						</div>
 						<div
 							className={styles.contactInfo}
@@ -325,7 +333,7 @@ const Contact = () => {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	);
 };
 
