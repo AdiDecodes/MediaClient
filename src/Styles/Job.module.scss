@@ -1,0 +1,295 @@
+@keyframes wipe-in-up {
+	from {
+		clip-path: inset(100% 0 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+[transition-style='in:wipe:up'] {
+	animation: 1s cubic-bezier(0.25, 1, 0.3, 1)
+		wipe-in-up both;
+}
+
+.transition {
+	background-color: #1d1d1d;
+
+	.mainWrapper {
+		background-color: #1d1d1d;
+		min-height: 100vh;
+		width: 100%;
+
+		.headingWrapper {
+			padding: 1rem 4rem;
+			color: white;
+			font-family: 'Montserrat', sans-serif;
+			h1 {
+				font-family: 600;
+				font-size: 2rem;
+			}
+
+			p {
+				font-size: 1.3rem;
+				margin: 0.5rem 0 0 0;
+			}
+		}
+
+		.jobWrapper {
+			padding: 1rem 4rem;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			width: 100%;
+
+			.jobCard {
+				overflow: hidden;
+				max-width: 23%;
+				padding: 1.5rem;
+				min-height: 33vh;
+				border: 1px solid #8f8f8f;
+				border-radius: 1.2rem;
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+
+				.DateWrapper {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+					margin: 0 0 1rem 0;
+
+					.date {
+						text-align: left;
+						font-size: 0.9rem;
+						padding: 0.5rem 1rem;
+						width: fit-content;
+						border-radius: 2rem;
+						border: 1px solid #c9c9c9;
+					}
+
+					img {
+						aspect-ratio: 1;
+						border-radius: 100%;
+						height: 2.6rem;
+					}
+				}
+
+				.CompanyName {
+					margin: 0 0.3rem;
+					font-size: 0.95rem;
+					font-weight: 300;
+				}
+
+				.position {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin: 0.4rem 0 0 0.3rem;
+					width: 100%;
+
+					h3 {
+						font-weight: 500;
+						letter-spacing: 0.08rem;
+						font-size: 1.5rem;
+					}
+				}
+
+				.description {
+					padding: 0 0.3rem;
+					margin: 0.6rem 0 0.8rem 0;
+					font-size: 0.95rem;
+					font-weight: 300;
+					letter-spacing: 1px;
+				}
+
+				.tagWrapper {
+					margin: 0.4rem 0 0 0;
+					width: 80%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.6rem 0.5rem;
+					.tag {
+						border-radius: 2rem;
+						font-size: 0.75rem;
+						padding: 0.5rem 1rem;
+						border: 1px solid white;
+					}
+				}
+
+				.location {
+					border-radius: 2rem;
+					background-color: white;
+					width: fit-content;
+					color: #252525;
+					padding: 0.3rem 1rem;
+					font-size: 0.95rem;
+					font-weight: 500;
+					margin: 0.5rem 0.3rem;
+				}
+
+				.applyBtn {
+					width: 100%;
+					background-color: white;
+					padding: 1rem;
+					color: black;
+					font-weight: 500;
+					font-size: 1.1rem;
+					border-radius: 5rem;
+					margin: 1rem 0 0 0;
+					text-align: center;
+					border: 1px solid transparent;
+					transition: all 0.15s ease-in-out;
+
+					&:hover {
+						cursor: pointer;
+						background-color: transparent;
+						border: 1px solid white;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.transition {
+		.mainWrapper {
+			background-color: #1d1d1d;
+			min-height: 100vh;
+			width: 100%;
+
+			.headingWrapper {
+				padding: 0 1.5rem;
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+				h1 {
+					font-family: 600;
+					font-size: 1.5rem;
+				}
+
+				p {
+					font-size: 1rem;
+					margin: 0.3rem 0 0 0;
+				}
+			}
+
+			.jobWrapper {
+				padding: 1.5rem;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				width: 100%;
+
+				.jobCard {
+					max-width: 100%;
+					min-height: 33vh;
+					width: 100%;
+					padding: 1rem;
+					border: 1px solid #8f8f8f;
+					border-radius: 1.2rem;
+					color: white;
+					font-family: 'Montserrat', sans-serif;
+
+					.DateWrapper {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						width: 100%;
+						margin: 0 0 1rem 0;
+
+						.date {
+							text-align: left;
+							font-size: 0.9rem;
+							padding: 0.5rem 1rem;
+							width: fit-content;
+							border-radius: 2rem;
+							border: 1px solid #c9c9c9;
+						}
+
+						img {
+							aspect-ratio: 1;
+							border-radius: 100%;
+							height: 2.6rem;
+						}
+					}
+
+					.CompanyName {
+						margin: 0 0.3rem;
+						font-size: 0.95rem;
+						font-weight: 300;
+					}
+
+					.position {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						margin: 0.4rem 0 0 0.3rem;
+						width: 100%;
+
+						h3 {
+							font-weight: 500;
+							letter-spacing: 0.08rem;
+							font-size: 1.5rem;
+						}
+					}
+
+					.description {
+						padding: 0 0.3rem;
+						margin: 0.6rem 0 0.8rem 0;
+						font-size: 0.95rem;
+						font-weight: 300;
+						letter-spacing: 1px;
+					}
+
+					.tagWrapper {
+						margin: 0.4rem 0 0 0;
+						width: 80%;
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.6rem 0.5rem;
+						.tag {
+							border-radius: 2rem;
+							font-size: 0.75rem;
+							padding: 0.5rem 1rem;
+							border: 1px solid white;
+						}
+					}
+
+					.location {
+						border-radius: 2rem;
+						background-color: white;
+						width: fit-content;
+						color: #252525;
+						padding: 0.3rem 1rem;
+						font-size: 0.95rem;
+						font-weight: 500;
+						margin: 0.5rem 0.3rem;
+					}
+
+					.applyBtn {
+						width: 100%;
+						background-color: white;
+						padding: 1rem;
+						color: black;
+						font-weight: 500;
+						font-size: 1.1rem;
+						border-radius: 5rem;
+						margin: 1rem 0 0 0;
+						text-align: center;
+						border: 1px solid transparent;
+						transition: all 0.15s ease-in-out;
+
+						&:hover {
+							cursor: pointer;
+							background-color: transparent;
+							border: 1px solid white;
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

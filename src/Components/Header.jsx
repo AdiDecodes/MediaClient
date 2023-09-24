@@ -87,6 +87,13 @@ const Header = ({ element }) => {
 				>
 					Brands
 				</p>
+				<p
+					onClick={() => {
+						navigate('/career');
+					}}
+				>
+					Career
+				</p>
 			</div>
 			<div
 				className={styles.menuBtn}
@@ -156,6 +163,14 @@ const Header = ({ element }) => {
 						}}
 					>
 						Brands
+					</h3>
+					<h3
+						onClick={() => {
+							setSidebar(false);
+							navigate('/career');
+						}}
+					>
+						Career
 					</h3>
 				</div>
 			</div>

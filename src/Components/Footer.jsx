@@ -30,7 +30,13 @@ const Footer = () => {
 					<h3>Services</h3>
 					<p>Projects</p>
 					<p>Services</p>
-					<p>Brands</p>
+					<p
+						onClick={() => {
+							window.open('/career', '_blank');
+						}}
+					>
+						Career
+					</p>
 				</div>
 				<div className={styles.section2}>
 					<h3>Company</h3>

@@ -4,6 +4,7 @@ import Home from '../src/Pages/Home';
 import Contact from '../src/Pages/Contact';
 import Services from '../src/Pages/Services';
 import Error from '../src/Pages/Error';
+import Job from '../src/Pages/Job';
 import '../src/index.scss';
 import {
 	BrowserRouter,
@@ -28,6 +29,10 @@ ReactDOM.createRoot(
 				<Route
 					path='/services'
 					element={<Services />}
+				/>
+				<Route
+					path='/career'
+					element={<Job />}
 				/>
 				<Route
 					path='/*'
