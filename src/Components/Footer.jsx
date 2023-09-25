@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Styles/Footer.module.scss';
+import { useNavigate } from 'react-router-dom';
 import {
 	AiFillLinkedin,
 	AiFillTwitterSquare,
@@ -9,7 +10,8 @@ import {
 
 import { MdEmail } from 'react-icons/md';
 
-const Footer = () => {
+const Footer = ({ element }) => {
+	const navigate = useNavigate();
 	return (
 		<div className={styles.globalWrapper}>
 			<div className={styles.wrapper}>
@@ -18,21 +20,69 @@ const Footer = () => {
 					<p>Elevate, Innovate, Dominate</p>
 
 					<div className={styles.social}>
-						<AiFillFacebook />
-						<AiFillInstagram />
+						<AiFillFacebook
+							onClick={() => {
+								window.open(
+									'https://www.facebook.com/firdausmedia',
+									'_blank'
+								);
+							}}
+						/>
+						<AiFillInstagram
+							onClick={() => {
+								window.open(
+									'https://www.instagram.com/firdausxmedia',
+									'_blank'
+								);
+							}}
+						/>
 						<AiFillTwitterSquare />
 						<AiFillLinkedin />
-						<MdEmail />
+						<MdEmail
+							onClick={() => {
+								window.open(
+									'mailto:contact@firdausmedia.com',
+									'_blank'
+								);
+							}}
+						/>
 					</div>
 				</div>
 
 				<div className={styles.section2}>
-					<h3>Services</h3>
-					<p>Projects</p>
-					<p>Services</p>
+					<h3>Quick Links</h3>
 					<p
 						onClick={() => {
-							window.open('/career', '_blank');
+							navigate('/');
+							const y =
+								element.projectRef.current.getBoundingClientRect()
+									.top + window.scrollY;
+							window.scroll({
+								top: y,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Projects
+					</p>
+					<p
+						onClick={() => {
+							navigate('/services');
+							window.scroll({
+								top: 0,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Services
+					</p>
+					<p
+						onClick={() => {
+							navigate('/career');
+							window.scroll({
+								top: 0,
+								behavior: 'smooth',
+							});
 						}}
 					>
 						Career
@@ -40,9 +90,39 @@ const Footer = () => {
 				</div>
 				<div className={styles.section2}>
 					<h3>Company</h3>
-					<p>About Us</p>
-					<p>Contact Us</p>
-					<p>Privacy Policy</p>
+					<p
+						onClick={() => {
+							navigate('/about');
+							window.scroll({
+								top: 0,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						About Us
+					</p>
+					<p
+						onClick={() => {
+							navigate('/contact');
+							window.scroll({
+								top: 0,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Contact Us
+					</p>
+					<p
+						onClick={() => {
+							navigate('/privacy-policy');
+							window.scroll({
+								top: 0,
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Privacy Policy
+					</p>
 				</div>
 			</div>
 			<div className={styles.divider}></div>

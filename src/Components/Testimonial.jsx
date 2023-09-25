@@ -3,45 +3,34 @@ import styles from './Styles/Testimonial.module.scss';
 import { BiSolidQuoteAltLeft } from 'react-icons/bi';
 
 const Testimonial = () => {
+	const Image1 = import.meta.env.VITE_IMAGE1;
+	const Image2 = import.meta.env.VITE_IMAGE2;
+	const Image3 = import.meta.env.VITE_IMAGE3;
 	const [testimonialData, setTestimonialData] =
 		useState([
 			{
 				id: 0,
 				content: `UI/UX delivered almost in no time! That was fantastic. Working with this agency not only got my work done but making connections with them was a great experience. I would love to work with them again!`,
 				author: 'Aditya Singh',
-				designation: 'Web Developer, SuperBattle.com',
+				designation: 'Web Developer, superbattle.com',
 				profilepic:
-					'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+					'https://static.vecteezy.com/system/resources/previews/010/260/479/large_2x/default-avatar-profile-icon-of-social-media-user-in-clipart-style-vector.jpg',
 			},
 			{
 				id: 1,
-				content: `Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Error, nobis? Omnis
-                quaerat iste voluptas, itaque sed corporis
-                rerum, error, dignissimos voluptatum sunt
-                accusantium temporibus. Nulla, odio!
-                Doloremque ut dignissimos facere vero nemo
-                obcaecati aliquam doloribus illo. Dolor
-                maxime, atque ducimus odio magni sit`,
-				author: 'James Carter',
-				designation: 'Founder at JameGame.com',
+				content: `Firdaus Media's video and graphic designing services are a game-changer. Their stunning graphics and engaging videos have elevated our marketing campaigns. Highly recommended!`,
+				author: 'Suraj Yadav',
+				designation: `Meme Creator, @the.funny.indian`,
 				profilepic:
-					'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+					'https://static.vecteezy.com/system/resources/previews/010/260/479/large_2x/default-avatar-profile-icon-of-social-media-user-in-clipart-style-vector.jpg',
 			},
 			{
 				id: 2,
-				content: `Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Error, nobis? Omnis
-                quaerat iste voluptas, itaque sed corporis
-                rerum, error, dignissimos voluptatum sunt
-                accusantium temporibus. Nulla, odio!
-                Doloremque ut dignissimos facere vero nemo
-                obcaecati aliquam doloribus illo. Dolor
-                maxime, atque ducimus odio magni sit`,
-				author: 'James Carter',
-				designation: 'Founder at JameGame.com',
+				content: `Firdaus Media transformed our online presence. Their web development and SEO strategies drove more organic traffic. Highly professional and responsive team.`,
+				author: 'Priyanshu Tiwari',
+				designation: 'SEO Expert, viralflumemes.com',
 				profilepic:
-					'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+					'https://static.vecteezy.com/system/resources/previews/010/260/479/large_2x/default-avatar-profile-icon-of-social-media-user-in-clipart-style-vector.jpg',
 			},
 		]);
 	return (
@@ -64,6 +53,10 @@ const Testimonial = () => {
 							<div className={styles.line}></div>
 							<div className={styles.bottomBar}>
 								<img
+									draggable='false'
+									onContextMenu={(e) => {
+										e.preventDefault();
+									}}
 									src={item.profilepic}
 									alt='img'
 								/>

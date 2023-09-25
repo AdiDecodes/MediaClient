@@ -154,7 +154,9 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<Footer />
+						<Footer
+							element={{ brandRef, projectRef }}
+						/>
 					</div>
 				</>
 			)}
