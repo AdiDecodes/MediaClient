@@ -108,7 +108,7 @@
 		}
 
 		.aboutUs {
-			height: 80vh;
+			min-height: 80vh;
 			padding: 1rem 5rem;
 			width: 100%;
 			display: flex;
@@ -178,7 +178,7 @@
 					font-weight: 500;
 					font-size: 1.1rem;
 					border: 1px solid transparent;
-					width: 30%;
+					width: 50%;
 					transition: all 0.2s ease-in-out;
 
 					&:hover {
@@ -217,7 +217,6 @@
 			align-items: center;
 			width: 100%;
 			min-height: 20vh;
-			height: 20vh;
 			display: flex;
 
 			.line {
