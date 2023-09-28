@@ -11,11 +11,11 @@ const Projects = () => {
 	const [projectData, setProjectData] = useState([
 		{
 			id: 0,
-			title: 'PLAYGROUND',
-			description: 'Meme Marketing | 148M+ Views',
+			title: 'Bacchan Pandey',
+			description: 'Movie Campaign | 50M+ Reach',
 			projectURL:
-				'https://www.instagram.com/reel/CeFueIrDUlb/?utm_source=ig_web_copy_link',
-			img: memeMarketingImg,
+				'https://www.instagram.com/reel/CaHRLm5gmIr/?igshid=YmMyMTA2M2Y%3D',
+			img: 'https://i.ytimg.com/vi/-h9hj8BnTDk/maxresdefault.jpg',
 		},
 		{
 			id: 1,
@@ -27,11 +27,11 @@ const Projects = () => {
 		},
 		{
 			id: 2,
-			title: 'MamaEarth',
-			description:
-				'Instagram Marketing | 19th june, 2022',
-			projectURL: 'https://www.google.com',
-			img: 'https://i0.wp.com/deshicompanies.com/wp-content/uploads/2021/06/Mamaearth-company.png?fit=1280%2C720&ssl=1',
+			title: 'Dasvi',
+			description: 'Movie Campaign | 35M+ Reach',
+			projectURL:
+				'https://www.instagram.com/reel/CbcznlFJzBZ/?igshid=YmMyMTA2M2Y%3D',
+			img: 'https://m.media-amazon.com/images/M/MV5BYWJmNmIyZDEtMmU1Ni00OGVmLWIxMzMtOTg3ZDczZDA3ZWZkXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_.jpg',
 		},
 	]);
 	return (

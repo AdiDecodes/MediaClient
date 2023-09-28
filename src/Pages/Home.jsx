@@ -44,8 +44,13 @@ const Home = () => {
 							<div className={styles.section1}>
 								<div className={styles.left}>
 									<h1>
-										Take your business to the moon . .
+										Changes can be hard, We can help!
 									</h1>
+									<p>
+										Unleash your brand's potential with
+										Firdaus Media, the creative agency that
+										turns imagination into reality
+									</p>
 									<div
 										className={styles.contactBtn}
 										onClick={() => {

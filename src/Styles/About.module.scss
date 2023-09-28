@@ -1,0 +1,147 @@
+.mainWrapper {
+	background-color: #1d1d1d;
+	min-height: 100svh;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.aboutWrapper {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+
+		h3 {
+			text-align: center;
+			margin: 3rem 0 0 0;
+			font-size: 2.5rem;
+			font-weight: 300;
+		}
+
+		img {
+			aspect-ratio: 1;
+			width: 50%;
+			object-fit: contain;
+		}
+	}
+
+	.aboutUs {
+		padding: 0 15%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.innerDiv {
+			max-width: 65%;
+			h3 {
+				color: #ffffff;
+				font-size: 1.2rem;
+				font-weight: 300;
+			}
+
+			p {
+				&:nth-child(2) {
+					color: white;
+					margin: 1rem 0;
+					font-size: 1.5rem;
+					font-weight: 600;
+					line-height: 2.5rem;
+				}
+
+				&:nth-child(3) {
+					color: #e6e6e6;
+					margin: 1.3rem 0 0 0;
+					font-size: 1.2rem;
+					font-weight: 400;
+					line-height: 1.75rem;
+				}
+				&:nth-child(4) {
+					color: #e6e6e6;
+					margin: 1.3rem 0 0 0;
+					font-size: 1.2rem;
+					font-weight: 400;
+					line-height: 1.75rem;
+				}
+				&:nth-child(5) {
+					color: #e6e6e6;
+					margin: 1.3rem 0 0 0;
+					font-size: 1.2rem;
+					font-weight: 400;
+					line-height: 1.75rem;
+				}
+			}
+		}
+	}
+
+	.team {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1rem;
+		width: 60%;
+		margin: 3rem 0;
+
+		h3 {
+			color: #e6e6e6;
+			font-size: 2rem;
+			margin: 0 0 1rem 0;
+		}
+
+		.teamCard {
+			overflow: hidden;
+			width: 100%;
+			display: flex;
+			height: 22vh;
+
+			.image {
+				border-radius: 0.5rem;
+				aspect-ratio: 1;
+				height: 100%;
+				background-color: #e6e6e6;
+				img {
+					aspect-ratio: 1;
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+
+			.memberInfo {
+				background-color: #e6e6e6;
+				margin: 0 0 0 1.5rem;
+				width: 100%;
+				padding: 2rem;
+				color: #1d1d1d;
+				border-radius: 0.5rem;
+
+				h3 {
+					font-weight: 500;
+					font-size: 1.5rem;
+					color: #1d1d1d;
+					margin: 0 0 0.2rem 0;
+				}
+
+				p {
+					color: #1d1d1d;
+					font-family: 'Montserrat', sans-serif;
+
+					&:nth-child(2) {
+						font-size: 1rem;
+						font-weight: 400;
+						margin: 0 0 0.5rem 0;
+					}
+
+					&:nth-child(3) {
+						font-size: 1.2rem;
+						font-weight: 400;
+						margin: 0 0 0.5rem 0;
+					}
+				}
+			}
+		}
+	}
+}
