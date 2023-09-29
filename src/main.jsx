@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from '../src/Pages/Home';
 import Contact from '../src/Pages/Contact';
-import Services from '../src/Pages/Services';
+import Service from '../src/Pages/Service';
 import Error from '../src/Pages/Error';
 import Job from '../src/Pages/Job';
 import About from '../src/Pages/About';
@@ -30,7 +30,7 @@ ReactDOM.createRoot(
 				/>
 				<Route
 					path='/services'
-					element={<Services />}
+					element={<Service />}
 				/>
 				<Route
 					path='/career'

@@ -1,0 +1,312 @@
+@keyframes wipe-in-up {
+	from {
+		clip-path: inset(100% 0 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+[transition-style='in:wipe:up'] {
+	animation: 1s cubic-bezier(0.25, 1, 0.3, 1)
+		wipe-in-up both;
+}
+
+.transitionWrapper {
+	background-color: #1d1d1d;
+	.mainWrapper {
+		background-color: #1d1d1d;
+		min-height: 100svh;
+		overflow: auto;
+
+		.Innerwrapper {
+			.headingWrapper {
+				margin: 1rem 0;
+				padding: 0 2rem;
+				color: #ffffff;
+				font-family: 'Montserrat', sans-serif;
+				h3 {
+					font-size: 2.5rem;
+					font-weight: 700;
+					text-align: center;
+					margin: 2rem 0 0.5rem 0;
+				}
+
+				P {
+					font-size: 1.25rem;
+					font-weight: 400;
+					text-align: center;
+				}
+			}
+
+			.serviceWrapper {
+				display: flex;
+				padding: 2rem 4rem;
+				font-family: 'Montserrat', sans-serif;
+				gap: 1.5rem;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				.serviceCard {
+					min-width: calc(100% / 4);
+					min-height: 30vh;
+					height: 40vh;
+					width: calc(100% / 4);
+					aspect-ratio: 1;
+					border: 1px solid #ffffff4f;
+					transition: all 0.2s ease-in-out;
+					background-color: #ffffff;
+					padding: 3rem 1.5rem;
+
+					img {
+						height: 25%;
+						aspect-ratio: 1;
+						margin: 0 0 0.5rem 0;
+						transition: all 0.2s ease-in-out;
+					}
+
+					h3 {
+						font-size: 1.5rem;
+						font-weight: 700;
+					}
+
+					p {
+						margin: 0.3rem 0;
+						font-size: 1.15rem;
+					}
+
+					.enquiryButton {
+						padding: 1rem 0.2rem;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						width: fit-content;
+
+						p {
+							color: black;
+							font-weight: 500;
+							transition: all 0.2s ease-in-out;
+						}
+
+						svg {
+							margin: 0 0 0 0.75rem;
+							font-size: 1.5rem;
+							transition: all 0.2s ease-in-out;
+						}
+
+						&:hover {
+							svg {
+								transform: translateX(0.5rem);
+							}
+						}
+					}
+
+					&:hover {
+						cursor: pointer;
+						box-shadow: 0px 0px 10px rgb(255, 255, 255);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.transitionWrapper {
+		background-color: #1d1d1d;
+		.mainWrapper {
+			background-color: #1d1d1d;
+			min-height: 100svh;
+			width: 100%;
+
+			.Innerwrapper {
+				.headingWrapper {
+					margin: 1rem 0;
+					padding: 0 1.5rem;
+					color: #ffffff;
+					font-family: 'Montserrat', sans-serif;
+
+					h3 {
+						font-size: 2rem;
+						font-weight: 700;
+						margin: 0.5rem 0 0.5rem 0;
+						text-align: left;
+					}
+
+					P {
+						font-size: 1.05rem;
+						font-weight: 400;
+						text-align: left;
+					}
+				}
+
+				.serviceWrapper {
+					display: flex;
+					padding: 2rem 1rem;
+					font-family: 'Montserrat', sans-serif;
+					gap: 1.5rem;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					.serviceCard {
+						min-width: 100%;
+						min-height: 40vh;
+						height: 50%;
+						width: 100%;
+						border: 1px solid #ffffff4f;
+						transition: all 0.2s ease-in-out;
+						background-color: #ffffff;
+						padding: 3rem 1.5rem;
+
+						img {
+							height: 25%;
+							aspect-ratio: 1;
+							margin: 0 0 0.5rem 0;
+							transition: all 0.2s ease-in-out;
+						}
+
+						h3 {
+							font-size: 1.3rem;
+							font-weight: 700;
+						}
+
+						p {
+							margin: 0.5rem 0;
+							font-size: 1.15rem;
+						}
+
+						.enquiryButton {
+							padding: 1rem 0.1rem;
+							display: flex;
+							justify-content: flex-start;
+							align-items: center;
+							width: fit-content;
+
+							p {
+								color: black;
+								font-weight: 500;
+								transition: all 0.2s ease-in-out;
+							}
+
+							svg {
+								margin: 0 0 0 0.75rem;
+								font-size: 1.5rem;
+								transition: all 0.2s ease-in-out;
+							}
+
+							&:hover {
+								svg {
+									transform: translateX(0.5rem);
+								}
+							}
+						}
+
+						&:hover {
+							cursor: pointer;
+							box-shadow: 0px 0px 10px rgb(255, 255, 255);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1500px) {
+	.transitionWrapper {
+		background-color: #1d1d1d;
+
+		.mainWrapper {
+			background-color: #1d1d1d;
+			min-height: 100svh;
+			width: 100%;
+
+			.transitionWrapper {
+				.headingWrapper {
+					margin: 1rem 0;
+					padding: 0 2rem;
+					color: #ffffff;
+					font-family: 'Montserrat', sans-serif;
+
+					h3 {
+						font-size: 2rem;
+						font-weight: 700;
+						margin: 2rem 0 0.5rem 0;
+						text-align: center;
+					}
+
+					P {
+						font-size: 1.05rem;
+						font-weight: 400;
+						text-align: center;
+					}
+				}
+
+				.serviceWrapper {
+					display: flex;
+					padding: 2rem 1rem;
+					font-family: 'Montserrat', sans-serif;
+					gap: 1.5rem;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					.serviceCard {
+						width: calc(100% / 2.2);
+						border: 1px solid #ffffff4f;
+						transition: all 0.2s ease-in-out;
+						background-color: #ffffff;
+						padding: 3rem 1.5rem;
+
+						img {
+							height: 25%;
+							aspect-ratio: 1;
+							margin: 0 0 0.5rem 0;
+							transition: all 0.2s ease-in-out;
+						}
+
+						h3 {
+							font-size: 1.5rem;
+							font-weight: 700;
+						}
+
+						p {
+							margin: 0.5rem 0;
+							font-size: 1.15rem;
+						}
+
+						.enquiryButton {
+							padding: 1rem 0.1rem;
+							display: flex;
+							justify-content: flex-start;
+							align-items: center;
+							width: fit-content;
+
+							p {
+								color: black;
+								font-weight: 500;
+								transition: all 0.2s ease-in-out;
+							}
+
+							svg {
+								margin: 0 0 0 0.75rem;
+								font-size: 1.5rem;
+								transition: all 0.2s ease-in-out;
+							}
+
+							&:hover {
+								svg {
+									transform: translateX(0.5rem);
+								}
+							}
+						}
+
+						&:hover {
+							cursor: pointer;
+							box-shadow: 0px 0px 10px rgb(255, 255, 255);
+						}
+					}
+				}
+			}
+		}
+	}
+}
