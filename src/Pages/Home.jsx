@@ -109,8 +109,8 @@ const Home = () => {
 										<p>Who We Are</p>
 									</div>
 									<h3>
-										Providing creative and technology
-										services for growing brands
+										Discover Firdaus Media Empowering Brands
+										to Shine
 									</h3>
 									<div className={styles.line}></div>
 									<p>

@@ -36,11 +36,10 @@ const Testimonial = () => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.heading}>
-				<BiSolidQuoteAltLeft />
 				<h3>
-					Beloved by so many <br />
-					businesses out there!
+					Beloved by so many businesses out there!
 				</h3>
+				<p>See what our client says</p>
 			</div>
 			<div className={styles.testimonialWrapper}>
 				{testimonialData.map((item) => {

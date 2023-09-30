@@ -131,8 +131,8 @@
 				.line {
 					height: 1px;
 					background-color: grey;
-					width: 35%;
-					margin: 2rem 0 1.5rem 0;
+					width: 40%;
+					margin: 1.5rem 0;
 				}
 
 				.heading {
@@ -270,7 +270,11 @@
 				min-width: 50%;
 				.headingWrapper {
 					p {
-						@include description();
+						font-family: 'Montserrat', sans-serif;
+						font-size: 1.1rem;
+						color: aliceblue;
+						font-weight: 300;
+						line-height: 1.7rem;
 					}
 					.headingContainer {
 						display: flex;
@@ -295,13 +299,16 @@
 					.line {
 						height: 1px;
 						background-color: grey;
-						width: 35%;
-						margin: 2rem 0 1.5rem 0;
+						width: 100%;
+						margin: 1rem 0;
 					}
 
 					.heading {
 						margin: 1rem 0;
-						@include heading();
+						font-family: 'Montserrat', sans-serif;
+						font-size: 1.75rem;
+						color: white;
+						font-weight: 600;
 					}
 				}
 			}
