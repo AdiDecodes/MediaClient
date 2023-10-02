@@ -10,15 +10,15 @@ import {
 
 import mission from '../assets/Icons/mission.png';
 import values from '../assets/Icons/values.png';
+import TD from '../assets/Images/aditya.png';
+import CEO from '../assets/Images/rakshit.png';
+import CSO from '../assets/Images/varun.png';
+import COO from '../assets/Images/mamta.png';
+import PTDM from '../assets/Images/manpreet.png';
+import CAM from '../assets/Images/suraj.png';
+import BDE from '../assets/Images/amit.png';
 
 const About = () => {
-	const CEO = import.meta.env.VITE_CEO;
-	const CSO = import.meta.env.VITE_CSO;
-	const COO = import.meta.env.VITE_COO;
-	const BDE = import.meta.env.VITE_BDE;
-	const PTDM = import.meta.env.VITE_PTDM;
-	const TD = import.meta.env.VITE_TD;
-	const CAM = import.meta.env.VITE_CAM;
 	const [teamMembers, setTeamMembers] = useState([
 		{
 			id: 0,
