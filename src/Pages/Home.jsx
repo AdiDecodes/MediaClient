@@ -93,7 +93,7 @@ const Home = () => {
 								</div>
 								<div className={styles.line}></div>
 								<div className={styles.section}>
-									<p>5+</p>
+									<p>7+</p>
 									<p>Years of Experience</p>
 								</div>
 								<div className={styles.line}></div>
