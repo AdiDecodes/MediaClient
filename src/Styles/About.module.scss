@@ -1,144 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 .mainWrapper {
 	background-color: #1d1d1d;
 	min-height: 100svh;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Lato', sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	.aboutWrapper {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
+		margin: 0 0 2rem 0;
 		color: white;
-		font-family: 'Montserrat', sans-serif;
 
 		h3 {
-			text-align: center;
-			margin: 3rem 0 0 0;
-			font-size: 2.5rem;
-			font-weight: 300;
+			font-size: 2rem;
+			font-weight: 800;
 		}
 
-		img {
-			aspect-ratio: 1;
-			width: 50%;
-			object-fit: contain;
+		p {
+			font-size: 1.1rem;
+			font-weight: 400;
 		}
 	}
 
 	.aboutUs {
-		padding: 0 15%;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
+		flex-direction: column;
+		margin: 0 4rem;
+		width: 90%;
 
+		img {
+			border-radius: 0.5rem;
+			width: 60%;
+			height: auto;
+			margin: 0 0 2.5rem 0;
+		}
 		.innerDiv {
-			max-width: 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			h3 {
 				color: #ffffff;
-				font-size: 1.2rem;
-				font-weight: 300;
+				font-size: 1.4rem;
+				font-weight: 600;
+				width: 60%;
+				text-align: left;
 			}
 
 			p {
-				&:nth-child(2) {
-					color: white;
-					margin: 1rem 0;
-					font-size: 1.5rem;
-					font-weight: 600;
-					line-height: 2.5rem;
-				}
-
-				&:nth-child(3) {
-					color: #e6e6e6;
-					margin: 1.3rem 0 0 0;
-					font-size: 1.2rem;
-					font-weight: 400;
-					line-height: 1.75rem;
-				}
-				&:nth-child(4) {
-					color: #e6e6e6;
-					margin: 1.3rem 0 0 0;
-					font-size: 1.2rem;
-					font-weight: 400;
-					line-height: 1.75rem;
-				}
-				&:nth-child(5) {
-					color: #e6e6e6;
-					margin: 1.3rem 0 0 0;
-					font-size: 1.2rem;
-					font-weight: 400;
-					line-height: 1.75rem;
-				}
+				color: white;
+				margin: 0.6rem 0;
+				font-size: 1.4rem;
+				font-weight: 300;
+				max-width: 60%;
+				letter-spacing: normal;
 			}
 		}
 	}
 
-	.team {
+	.mission {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		width: 65%;
+		margin: 2rem 0;
+
+		.missionWrapper {
+			flex: 1;
+			width: 50%;
+			padding: 2rem;
+			background-color: white;
+			border-radius: 0.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+
+			.heading {
+				display: flex;
+				align-items: center;
+				img {
+					width: 7%;
+				}
+
+				p {
+					font-size: 1.3rem;
+					font-weight: 600;
+					margin: 0 0 0 0.75rem;
+				}
+			}
+
+			p {
+				margin: 1rem 0 0 0.35rem;
+				font-weight: 400;
+				font-size: 1.25rem;
+			}
+
+			&:nth-child(2) {
+				margin: 0 0 0 1.5rem;
+			}
+		}
+	}
+
+	.usp {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: 1rem;
-		width: 60%;
-		margin: 3rem 0;
+		width: 90%;
+		padding: 0 4rem;
+		margin: 1rem 0;
 
 		h3 {
-			color: #e6e6e6;
-			font-size: 2rem;
-			margin: 0 0 1rem 0;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: #ffffff;
 		}
 
-		.teamCard {
-			overflow: hidden;
-			width: 100%;
-			display: flex;
-			height: 22vh;
+		p {
+			font-weight: 300;
+			margin: 1rem 0 0 0;
+			font-size: 1.4rem;
+			color: white;
+			max-width: 65%;
+		}
+	}
 
-			.image {
-				border-radius: 0.5rem;
-				aspect-ratio: 1;
-				height: 100%;
-				background-color: #e6e6e6;
-				img {
-					aspect-ratio: 1;
+	.team {
+		margin: 1rem 0;
+		width: 90%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		h3 {
+			font-weight: 800;
+			color: #ffffff;
+			font-size: 1.5rem;
+			margin: 0 0 1.5rem 0;
+		}
+
+		.teamWrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 100%;
+			gap: 1rem;
+
+			.teamCard {
+				border-radius: 1rem;
+				padding: 4rem 2rem 2rem 2rem;
+				width: 31%;
+				background-color: #ffffff;
+				color: rgb(0, 0, 0);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+
+				.imageWrapper {
+					display: flex;
+					align-items: flex-start;
+					flex-direction: column;
 					width: 100%;
-					height: 100%;
-					object-fit: contain;
+					img {
+						aspect-ratio: 1;
+						object-fit: cover;
+						width: 30%;
+						height: auto;
+						border-radius: 100%;
+						border: 1px solid #9e9e9e;
+					}
+
+					h3 {
+						margin: 0.75rem 0 0.25rem 0;
+						color: #1d1d1d;
+						font-size: 1.3rem;
+					}
+
+					p {
+						font-weight: 400;
+						font-size: 1.1rem;
+						margin: 0 0 1rem 0;
+					}
+				}
+
+				.memberInfo {
+					p {
+						font-weight: 400;
+						font-size: 1.15rem;
+						margin: 0 0 0.5rem 0;
+					}
 				}
 			}
+		}
+	}
+}
 
-			.memberInfo {
-				background-color: #e6e6e6;
-				margin: 0 0 0 1.5rem;
-				width: 100%;
-				padding: 2rem;
-				color: #1d1d1d;
+@media (max-width: 650px) {
+	.mainWrapper {
+		background-color: #1d1d1d;
+		min-height: 100svh;
+		font-family: 'Lato', sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.aboutWrapper {
+			margin: 0 0 2rem 0;
+			color: white;
+			width: 90%;
+
+			h3 {
+				font-size: 2rem;
+				font-weight: 600;
+			}
+		}
+
+		.aboutUs {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			margin: 0 0rem;
+			width: 100%;
+
+			img {
 				border-radius: 0.5rem;
-
+				width: 90%;
+				height: auto;
+				margin: 0 0 2rem 0;
+			}
+			.innerDiv {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				h3 {
-					font-weight: 500;
-					font-size: 1.5rem;
-					color: #1d1d1d;
-					margin: 0 0 0.2rem 0;
+					color: #ffffff;
+					font-size: 1.4rem;
+					font-weight: 600;
+					width: 90%;
+					text-align: left;
 				}
 
 				p {
-					color: #1d1d1d;
-					font-family: 'Montserrat', sans-serif;
+					color: white;
+					margin: 0.6rem 0;
+					font-size: 1.2rem;
+					font-weight: 300;
+					max-width: 90%;
+					letter-spacing: normal;
+				}
+			}
+		}
 
-					&:nth-child(2) {
-						font-size: 1rem;
-						font-weight: 400;
-						margin: 0 0 0.5rem 0;
+		.mission {
+			display: flex;
+			justify-content: center;
+			align-items: stretch;
+			flex-direction: column;
+			width: 90%;
+			margin: 2rem 0;
+
+			.missionWrapper {
+				flex: 1;
+				width: 100%;
+				padding: 1.5rem;
+				background-color: white;
+				border-radius: 0.5rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+
+				.heading {
+					display: flex;
+					align-items: center;
+					img {
+						width: 12%;
 					}
 
-					&:nth-child(3) {
-						font-size: 1.2rem;
-						font-weight: 400;
-						margin: 0 0 0.5rem 0;
+					p {
+						font-size: 1.3rem;
+						font-weight: 600;
+						margin: 0 0 0 0.75rem;
+					}
+				}
+
+				p {
+					margin: 0.85rem 0 0 0.35rem;
+					font-weight: 400;
+					font-size: 1.2rem;
+				}
+
+				&:nth-child(2) {
+					margin: 1.5rem 0 0 0rem;
+				}
+			}
+		}
+
+		.usp {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 90%;
+			padding: 0 0rem;
+			margin: 0.5rem 0;
+
+			h3 {
+				font-size: 1.5rem;
+				font-weight: 800;
+				color: #ffffff;
+				width: 100%;
+			}
+
+			p {
+				font-weight: 300;
+				margin: 1rem 0 0 0;
+				font-size: 1.2rem;
+				color: white;
+				max-width: 100%;
+			}
+		}
+
+		.team {
+			margin: 1rem 0;
+			width: 90%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+
+			h3 {
+				color: #ffffff;
+				font-size: 1.5rem;
+				margin: 0 0 1.5rem 0;
+				width: 100%;
+			}
+
+			.teamWrapper {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				flex-direction: column;
+				width: 100%;
+				gap: 1rem;
+
+				.teamCard {
+					border-radius: 0.25rem;
+					padding: 2rem 1.5rem;
+					width: 100%;
+					background-color: #ffffff;
+					color: rgb(0, 0, 0);
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+
+					.imageWrapper {
+						display: flex;
+						align-items: flex-start;
+						flex-direction: column;
+						width: 100%;
+						img {
+							width: 25%;
+							height: auto;
+							border-radius: 100%;
+						}
+
+						h3 {
+							margin: 0.75rem 0 0.25rem 0;
+							color: #1d1d1d;
+							font-size: 1.3rem;
+						}
+
+						p {
+							font-weight: 400;
+							font-size: 1.1rem;
+							margin: 0 0 1rem 0;
+						}
+					}
+
+					.memberInfo {
+						p {
+							font-weight: 400;
+							font-size: 1.15rem;
+							margin: 0 0 0.5rem 0;
+						}
 					}
 				}
 			}

@@ -44,7 +44,7 @@ const Home = () => {
 							<div className={styles.section1}>
 								<div className={styles.left}>
 									<h1>
-										Changes can be hard, We can help!
+										Empowering Your Brand's Digital Journey
 									</h1>
 									<p>
 										Unleash your brand's potential with

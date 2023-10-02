@@ -10,7 +10,7 @@ const Testimonial = () => {
 		useState([
 			{
 				id: 0,
-				content: `UI/UX delivered almost in no time! That was fantastic. Working with this agency not only got my work done but making connections with them was a great experience. I would love to work with them again!`,
+				content: `I have been extremely satisfied with Firdaus Media's digital marketing abilities. Their strategic insights and execution capabilities are incredible. Their efforts led in a significant increase in our online presence, which translated quickly into increased engagement and conversion rates. I strongly recommend Firdaus Media's services, and I look forward to future collaboration.`,
 				author: 'Aditya Singh',
 				designation: 'Web Developer, superbattle.com',
 				profilepic:
@@ -18,7 +18,7 @@ const Testimonial = () => {
 			},
 			{
 				id: 1,
-				content: `Firdaus Media's video and graphic designing services are a game-changer. Their stunning graphics and engaging videos have elevated our marketing campaigns. Highly recommended!`,
+				content: `Wow, I didn't realize how much digital presence had the potential to alter things until Firdaus Media came in. They truly understood our brand and made it shine online. It's as if somebody flipped a switch and everyone started talking about us! Definitely am looking forward to working with them again.`,
 				author: 'Suraj Yadav',
 				designation: `Meme Creator, @the.funny.indian`,
 				profilepic:
@@ -26,7 +26,7 @@ const Testimonial = () => {
 			},
 			{
 				id: 2,
-				content: `Firdaus Media transformed our online presence. Their web development and SEO strategies drove more organic traffic. Highly professional and responsive team.`,
+				content: `Team's data-driven digital strategies had a huge impact on our online presence. We're genuinely satisfied and intend to engage them for future campaigns.`,
 				author: 'Priyanshu Tiwari',
 				designation: 'SEO Expert, viralflumemes.com',
 				profilepic:

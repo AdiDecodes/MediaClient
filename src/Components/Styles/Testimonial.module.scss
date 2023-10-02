@@ -22,30 +22,32 @@
 		margin: 2rem 0;
 		width: 100%;
 		overflow: hidden;
+		min-height: fit-content;
+		height: fit-content;
 
 		.card {
 			background-color: white;
-			min-height: 23rem;
 			max-width: calc(33.33%);
-			width: calc(33.33%);
+			width: calc(32.5%);
 			padding: 3rem 1rem 1rem 1rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 
 			&:nth-child(n + 2) {
-				margin: 0 0 0 2rem;
+				margin: 0 0 0 1.5rem;
 			}
 
 			> p {
-				font-size: 1.2rem;
+				font-size: 1.1rem;
 				color: rgb(46, 46, 46);
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 500;
-				overflow: auto;
 				margin: 0 0 1.5rem 0;
 				line-height: 2rem;
 				font-style: italic;
+				overflow: auto;
+				text-align: center;
 
 				&::before {
 					content: '“';
