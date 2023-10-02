@@ -379,15 +379,9 @@
 				.InfoWrapper {
 					h3 {
 						text-align: center;
+						margin: 0 0 1rem 0;
 						@include heading();
-					}
-
-					p {
-						text-align: center;
-						color: rgb(49, 49, 49);
-						font-family: 'Montserrat', sans-serif;
 						font-size: 1.5rem;
-						margin: 1rem 0;
 					}
 				}
 
@@ -396,7 +390,7 @@
 					padding: 1rem 2rem;
 					color: white;
 					font-family: 'Montserrat', sans-serif;
-					font-size: 1.5rem;
+					font-size: 1.1rem;
 					width: 100%;
 					height: fit-content;
 					border-radius: 10rem;

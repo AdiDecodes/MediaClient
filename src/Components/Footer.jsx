@@ -16,8 +16,8 @@ const Footer = ({ element }) => {
 		<div className={styles.globalWrapper}>
 			<div className={styles.wrapper}>
 				<div className={styles.section1}>
-					<h1>FirdausMedia</h1>
-					<p>Elevate, Innovate, Dominate</p>
+					<h1>Firdaus Media</h1>
+					<p>Your Brand Becomes a Star</p>
 
 					<div className={styles.social}>
 						<AiFillFacebook

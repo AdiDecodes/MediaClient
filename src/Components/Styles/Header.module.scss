@@ -3,13 +3,13 @@
 
 .wrapper {
 	background-color: #1e1e1e;
-	height: 7rem;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 3rem;
 	align-items: center;
 	font-family: 'Montserrat', sans-serif;
+	height: 6rem;
 
 	.menuBtn {
 		display: none;
@@ -87,7 +87,6 @@
 		padding: 0 1rem;
 		align-items: center;
 		font-family: 'Montserrat', sans-serif;
-		position: relative;
 
 		.sidebar {
 			position: fixed;
@@ -124,10 +123,11 @@
 				display: flex;
 				align-items: center;
 				flex-direction: column;
-				margin: 5rem 0 0 0;
+				margin: 2rem 0 0 0;
+				overflow: auto;
 
 				h3 {
-					font-size: 2.5rem;
+					font-size: 1.75rem;
 					font-family: 'Open Sans', sans-serif;
 					color: #ffffff;
 					font-weight: 600;
@@ -137,7 +137,7 @@
 					}
 
 					&:nth-child(n + 2) {
-						margin: 3.5rem 0 0 0;
+						margin: 3.25rem 0 0 0;
 					}
 				}
 			}

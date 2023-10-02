@@ -48,6 +48,13 @@ const Header = ({ element }) => {
 				<p
 					onClick={() => {
 						navigate('/');
+					}}
+				>
+					Home
+				</p>
+				<p
+					onClick={() => {
+						navigate('/');
 						const y =
 							element.projectRef.current.getBoundingClientRect()
 								.top + window.scrollY;
@@ -59,20 +66,7 @@ const Header = ({ element }) => {
 				>
 					Projects
 				</p>
-				<p
-					onClick={() => {
-						navigate('/services');
-					}}
-				>
-					Services
-				</p>
-				<p
-					onClick={() => {
-						navigate('/contact');
-					}}
-				>
-					Contact
-				</p>
+
 				<p
 					onClick={() => {
 						navigate('/');
@@ -89,10 +83,17 @@ const Header = ({ element }) => {
 				</p>
 				<p
 					onClick={() => {
-						navigate('/career');
+						navigate('/services');
 					}}
 				>
-					Career
+					Services
+				</p>
+				<p
+					onClick={() => {
+						navigate('/contact');
+					}}
+				>
+					Contact
 				</p>
 			</div>
 			<div
@@ -118,6 +119,14 @@ const Header = ({ element }) => {
 					/>
 				</div>
 				<div className={styles.content}>
+					<h3
+						onClick={() => {
+							navigate('/');
+							setSidebar(false);
+						}}
+					>
+						Home
+					</h3>
 					<h3
 						onClick={() => {
 							navigate('/');

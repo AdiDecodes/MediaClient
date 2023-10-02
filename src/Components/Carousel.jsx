@@ -202,7 +202,7 @@ const Carousel = () => {
 				<p>
 					We are a brand strategy & digital design
 					agency building brands that matter in culture
-					with more than 5 years of experience.
+					with more than 7 years of experience.
 				</p>
 
 				<div

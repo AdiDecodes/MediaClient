@@ -47,9 +47,20 @@ const Home = () => {
 										Empowering Your Brand's Digital Journey
 									</h1>
 									<p>
-										Unleash your brand's potential with
-										Firdaus Media, the creative agency that
-										turns imagination into reality
+										We are Firdaus Media, the leaders of
+										digital excellence with over 7 years of
+										proven success. Our team of marketing
+										maestros don’t just follow trends; we
+										set them. We understand your vision,
+										align it with our innovation, and create
+										strategies that translate into tangible
+										triumphs. From Instagram mastery to
+										reaching your target audience with
+										precision, we've got the expertise, the
+										creativity, and the confidence to take
+										your brand to unparalleled heights.
+										Partner with us, and let's redefine
+										success together.
 									</p>
 									<div
 										className={styles.contactBtn}
@@ -143,11 +154,7 @@ const Home = () => {
 							<Testimonial />
 							<div className={styles.contactUs}>
 								<div className={styles.InfoWrapper}>
-									<h3>Have a Project In Mind ?</h3>
-									<p>
-										Let's talk about your brand or
-										requirement
-									</p>
+									<h3>Let’s talk about your brand</h3>
 								</div>
 								<div
 									className={styles.discussBtn}
