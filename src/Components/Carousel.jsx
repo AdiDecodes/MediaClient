@@ -3,21 +3,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './Styles/Carousel.module.scss';
-import dm from '../assets/dm.png';
-import am from '../assets/affiliate-marketing.png';
-import bb from '../assets/brand-building.png';
-import cc from '../assets/content-creation.png';
-import dmark from '../assets/digital-marketing.png';
-import gs from '../assets/growth-strategies.png';
-import im from '../assets/instagram-marketing.png';
-import IT from '../assets/IT-services.png';
-import mm from '../assets/meme-marketing.png';
-import seo from '../assets/seo-sem.png';
-import webdev from '../assets/web-dev.png';
-import ifm from '../assets/influencer-marketing.png';
-import pr from '../assets/pr.png';
-import vimdhayakJi from '../../src/assets/vimdhayak_ji.jpg';
 import doge from '../../src/assets/evil-doge.jpg';
+import brand from '../assets/Icons/brand.png';
+import instagram from '../assets/Icons/instagram.png';
+import mememarketing from '../assets/Icons/mememarketing.png';
+import pragency from '../assets/Icons/pragency.png';
 const Carousel = () => {
 	const settings = {
 		dots: false,
@@ -31,107 +21,35 @@ const Carousel = () => {
 	const [Services, setServices] = useState([
 		{
 			id: 1,
-			title: 'Digital Marketing',
-			description: `We don't just market; we create digital phenomena. Our strategies
-            are your roadmap to online dominance.
-            `,
-			image: dm,
-		},
-		{
-			id: 2,
-			title: 'Social Media Management',
-			description: `We nurture your online community like no other.
-            Engage, connect, and thrive with our expertise.
-            `,
-			image: dmark,
-		},
-		{
-			id: 3,
 			title: 'Focused Instagram Marketing',
 			description: `We make Instagram more than a platform; we make
             it your success story. Let's connect.
             `,
-			image: im,
+			image: instagram,
 		},
 		{
-			id: 4,
+			id: 2,
 			title: 'Meme Marketing',
 			description: `We make your brand viral, not just visible. Our memes don't just
             entertain; they resonate and engage.            
             `,
-			image: mm,
+			image: mememarketing,
 		},
 		{
-			id: 5,
-			title: 'Influencer Marketing',
-			description: `We connect you with voices that don't just speak but inspire.
-            Our influencer strategies are powerful.
-            `,
-			image: ifm,
-		},
-		{
-			id: 6,
+			id: 3,
 			title: 'Brand Building',
 			description: `We don't just build brands; we craft legacies. Let's make your brand
             an unforgettable experience.
             `,
-			image: bb,
+			image: brand,
 		},
 		{
-			id: 7,
+			id: 4,
 			title: 'PR Agency Services',
 			description: `We manage your reputation as we manage our excellence –
             with integrity and finesse.
             `,
-			image: pr,
-		},
-		{
-			id: 8,
-			title: 'Affiliate Marketing',
-			description: `We create partnerships that prosper. With us, your reach knows
-            no bounds.
-            `,
-			image: am,
-		},
-		{
-			id: 9,
-			title: 'Web Design & Development',
-			description: `We build websites that captivate and convert. Your
-            digital space, sculpted to perfection.            
-            `,
-			image: webdev,
-		},
-		{
-			id: 10,
-			title: 'Content Creation & Strategy',
-			description: `We craft content that doesn't just tell your story; it
-            sells your story
-            `,
-			image: cc,
-		},
-		{
-			id: 11,
-			title: 'SEO & SEM Services',
-			description: `We make your brand not just visible but victorious. Your
-            success in the digital marketplace is our promise.            
-            `,
-			image: seo,
-		},
-		{
-			id: 12,
-			title: 'Growth Marketing Strategies',
-			description: `We don't just grow businesses; we skyrocket them.
-            Let's fuel your success together.
-            `,
-			image: gs,
-		},
-		{
-			id: 13,
-			title: 'IT Services',
-			description: `We provide tech solutions that lead the industry. Your technology needs,
-            met with mastery
-            `,
-			image: IT,
+			image: pragency,
 		},
 	]);
 	return (
@@ -152,7 +70,7 @@ const Carousel = () => {
 					</div>
 					<div className={styles.card}>
 						<img
-							src={Services[3].image}
+							src={instagram}
 							alt=''
 						/>
 						<p>Focused Instagram Marketing</p>
@@ -165,7 +83,7 @@ const Carousel = () => {
 				<div className={styles.innerRight}>
 					<div className={styles.card}>
 						<img
-							src={Services[6].image}
+							src={brand}
 							alt=''
 						/>
 						<p>Brand Building</p>
@@ -177,7 +95,7 @@ const Carousel = () => {
 					</div>
 					<div className={styles.card}>
 						<img
-							src={Services[7].image}
+							src={pragency}
 							alt=''
 						/>
 						<p>PR Agency</p>

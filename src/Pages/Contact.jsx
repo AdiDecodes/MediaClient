@@ -1,6 +1,7 @@
 import React, {
 	useEffect,
 	useState,
+	useRef,
 } from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
@@ -16,18 +17,21 @@ import {
 	AiOutlineMail,
 	AiOutlineSend,
 } from 'react-icons/ai';
+import axios from 'axios';
+import {
+	ToastContainer,
+	toast,
+} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import PuffLoader from 'react-spinners/PuffLoader';
 const Contact = () => {
 	const [formData, setFormData] = useState({
-		Clientname: '',
+		clientname: '',
 		email: '',
 		phone: '',
 		category: '',
-		message: '~~~~~None~~~~~',
+		message: '',
 	});
-
-	useEffect(() => {
-		console.log(formData);
-	}, [formData]);
 
 	const SubmitClicked = () => {
 		const isEmpty = Object.values(formData).some(
@@ -35,6 +39,31 @@ const Contact = () => {
 		);
 
 		if (!isEmpty) {
+			const sendMail = async () => {
+				showToast('Sending Mail');
+				const options = {
+					method: 'POST',
+					url: 'https://mediaclient-backend.vercel.app/',
+					// url: 'http://localhost:4000/',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					data: formData,
+				};
+				const response = await axios.request(options);
+				if (response.data.status === 'success') {
+					updateToast('Mail Sent', true);
+					setFormData({
+						clientname: '',
+						email: '',
+						phone: '',
+						category: '',
+						message: '',
+					});
+				} else {
+					updateToast('Mail Not Sent', false);
+				}
+			};
 			const validatePhone = (num) => {
 				const regexP = /^(\+91|0)?[6789]\d{9}$/;
 				const isValid = regexP.test(num);
@@ -51,16 +80,77 @@ const Contact = () => {
 			if (validatePhone(formData.phone)) {
 				if (validateEmail(formData.email)) {
 					console.log('Form Valid');
+					sendMail();
 				} else {
-					console.log('Email Galat');
+					errorMsg('Invalid Email');
 				}
 			} else {
-				console.log('Phone Galat');
+				errorMsg('Invalid Phone Number');
 			}
 		} else {
-			console.log('Kuch to khali hai');
+			errorMsg('Please fill all the fields');
 		}
 	};
+
+	const toastRef = useRef(null);
+
+	const toastProps = {
+		position: 'top-right',
+		hideProgressBar: true,
+		closeOnClick: true,
+		pauseOnHover: true,
+		autoClose: 5000,
+		draggable: true,
+		progress: undefined,
+		theme: 'light',
+	};
+
+	const updateToast = (message, success) => {
+		if (success == true) {
+			toast.update(toastRef.current, {
+				hideProgressBar: false,
+				type: toast.TYPE.SUCCESS,
+				render: message,
+				autoClose: 5000,
+				closeButton: null,
+			});
+		} else {
+			toast.update(toastRef.current, {
+				hideProgressBar: false,
+				type: toast.TYPE.ERROR,
+				render: message,
+				autoClose: 5000,
+				closeButton: null,
+			});
+		}
+	};
+
+	const errorMsg = (msg) => {
+		toast.error(msg);
+	};
+
+	const showToast = (message) => {
+		toastRef.current = toast(
+			<div
+				style={{
+					display: 'flex',
+					justifyContent: 'flex-start',
+					alignItems: 'center',
+				}}
+			>
+				<PuffLoader
+					size={40}
+					aria-label='Loading Spinner'
+					data-testid='loader'
+				/>
+				<span style={{ margin: '0 0 0 15px' }}>
+					{message}
+				</span>
+			</div>,
+			toastProps
+		);
+	};
+
 	const [Services, setServices] = useState([
 		{
 			id: 0,
@@ -120,45 +210,6 @@ const Contact = () => {
 		},
 	]);
 
-	// useEffect(() => {
-	// 	new FinisherHeader({
-	// 		count: 200,
-	// 		size: {
-	// 			min: 2,
-	// 			max: 8,
-	// 			pulse: 0.1,
-	// 		},
-	// 		speed: {
-	// 			x: {
-	// 				min: 0,
-	// 				max: 0.4,
-	// 			},
-	// 			y: {
-	// 				min: 0,
-	// 				max: 0.6,
-	// 			},
-	// 		},
-	// 		colors: {
-	// 			background: '#000000',
-	// 			particles: [
-	// 				'#ffffff',
-	// 				'#ffffff',
-	// 				'#ffffff',
-	// 				'#ffffff',
-	// 				'#ffffff',
-	// 				'#ffffff',
-	// 				'#ffffff',
-	// 			],
-	// 		},
-	// 		blending: 'screen',
-	// 		opacity: {
-	// 			center: 1,
-	// 			edge: 0.05,
-	// 		},
-	// 		skew: 0,
-	// 		shapes: ['s', 't'],
-	// 	});
-	// }, []);
 	return (
 		<div className={styles.transitionWrapper}>
 			<Header />
@@ -190,9 +241,10 @@ const Contact = () => {
 									onChange={(e) => {
 										setFormData((prev) => ({
 											...prev,
-											Clientname: e.target.value,
+											clientname: e.target.value,
 										}));
 									}}
+									value={formData.clientname}
 								/>
 								<input
 									placeholder='Email'
@@ -204,6 +256,7 @@ const Contact = () => {
 											email: e.target.value,
 										}));
 									}}
+									value={formData.email}
 								/>
 							</div>
 							<div className={styles.formInner}>
@@ -217,6 +270,7 @@ const Contact = () => {
 											phone: e.target.value,
 										}));
 									}}
+									value={formData.phone}
 								/>
 								<select
 									className={styles.selectStyle}
@@ -235,6 +289,7 @@ const Contact = () => {
 											}));
 										}
 									}}
+									value={formData.category}
 								>
 									{Services.map((item) => {
 										return (
@@ -266,6 +321,7 @@ const Contact = () => {
 										}));
 									}
 								}}
+								value={formData.message}
 							/>
 							<div
 								className={styles.submitBtn}
@@ -333,6 +389,7 @@ const Contact = () => {
 				</div>
 			</div>
 			<Footer />
+			<ToastContainer />
 		</div>
 	);
 };

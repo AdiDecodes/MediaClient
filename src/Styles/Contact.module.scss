@@ -7,6 +7,10 @@
 	}
 }
 
+html {
+	font-size: 100%;
+}
+
 [transition-style='in:wipe:up'] {
 	animation: 1s cubic-bezier(0.25, 1, 0.3, 1)
 		wipe-in-up both;
@@ -290,6 +294,9 @@
 }
 
 @media (max-width: 1024px) {
+	html {
+		font-size: 90%;
+	}
 	.transitionWrapper {
 		.Globalwrapper {
 			background-color: #1d1d1d;
